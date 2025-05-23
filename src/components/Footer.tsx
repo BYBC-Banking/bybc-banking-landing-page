@@ -68,22 +68,13 @@ const Footer = () => {
               <h3 className="text-xl text-white font-medium">Your Security is Our Priority</h3>
             </div>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              BYBC Banking is regulated by the South African Reserve Bank and employs 
-              bank-grade encryption to protect your data and funds. Your deposits are 
-              protected and your crypto remains in your control.
+              BYBC Banking employs bank-grade encryption to protect your data and funds. 
+              Your deposits are protected and your crypto remains in your control.
             </p>
           </div>
 
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center items-center gap-8 mb-12 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#ffd700] rounded-full" />
-              <span>SARB Regulated</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#ffd700] rounded-full" />
-              <span>ISO 27001 Certified</span>
-            </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#ffd700] rounded-full" />
               <span>Bank-Grade Encryption</span>

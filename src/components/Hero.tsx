@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Play, Download, Smartphone } from "lucide-react";
 
@@ -60,10 +59,6 @@ const Hero = () => {
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#ffd700] rounded-full" />
               <span>Bank-grade security</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#ffd700] rounded-full" />
-              <span>SARB regulated</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#ffd700] rounded-full" />

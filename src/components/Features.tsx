@@ -79,7 +79,7 @@ const Features = () => {
           <div className="inline-flex items-center gap-3 bg-gray-900 border border-gray-800 rounded-full px-6 py-3">
             <Shield className="w-5 h-5 text-[#ffd700]" />
             <span className="text-sm text-gray-300">
-              Bank-grade encryption • SARB regulated • ISO 27001 certified
+              Bank-grade encryption
             </span>
           </div>
         </div>
