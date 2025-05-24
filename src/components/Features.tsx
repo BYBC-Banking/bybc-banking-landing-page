@@ -63,7 +63,7 @@ const Features = () => {
                     <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                     
                     <div className="mt-6">
-                      <button className="text-[#ffd700] text-sm font-medium hover:underline transition-all duration-300">
+                      <button className="text-[#ffd700] text-sm font-medium hover:underline transition-all duration-300 md:hover:bg-white md:hover:bg-opacity-5 md:hover:px-2 md:hover:py-1 md:hover:rounded">
                         Explore Feature →
                       </button>
                     </div>

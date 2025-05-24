@@ -51,7 +51,7 @@ const AppPreview = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Phone mockup with carousel */}
-          <div className="flex justify-center">
+          <div className="flex justify-center relative">
             <div className="relative">
               <div className="w-80 h-[640px] bg-black rounded-[3rem] p-6 shadow-2xl border border-gray-800">
                 <div className="w-full h-full bg-gradient-to-b from-[#1a1a3a] to-[#0f0f23] rounded-[2rem] overflow-hidden relative">
@@ -137,29 +137,29 @@ const AppPreview = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Navigation buttons */}
-              <div className="absolute top-1/2 -left-16 transform -translate-y-1/2">
-                <Button
-                  onClick={prevScreen}
-                  variant="outline"
-                  size="icon"
-                  className="w-12 h-12 rounded-full border-gray-700 bg-gray-900 hover:bg-[#ffd700] hover:text-[#0f0f23] hover:border-[#ffd700]"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </Button>
-              </div>
-              
-              <div className="absolute top-1/2 -right-16 transform -translate-y-1/2">
-                <Button
-                  onClick={nextScreen}
-                  variant="outline"
-                  size="icon"
-                  className="w-12 h-12 rounded-full border-gray-700 bg-gray-900 hover:bg-[#ffd700] hover:text-[#0f0f23] hover:border-[#ffd700]"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </Button>
-              </div>
+            {/* Navigation buttons - positioned to be visible on mobile */}
+            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 lg:-left-16">
+              <Button
+                onClick={prevScreen}
+                variant="outline"
+                size="icon"
+                className="w-12 h-12 rounded-full border-gray-700 bg-gray-900 hover:bg-[#ffd700] hover:text-[#0f0f23] hover:border-[#ffd700]"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </Button>
+            </div>
+            
+            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 lg:-right-16">
+              <Button
+                onClick={nextScreen}
+                variant="outline"
+                size="icon"
+                className="w-12 h-12 rounded-full border-gray-700 bg-gray-900 hover:bg-[#ffd700] hover:text-[#0f0f23] hover:border-[#ffd700]"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </Button>
             </div>
           </div>
 
