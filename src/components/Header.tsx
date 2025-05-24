@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { 
   NavigationMenu, 
   NavigationMenuContent, 
@@ -137,9 +138,9 @@ const Header = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-[#0f0f23] border-gray-800 w-80">
-                <div className="flex flex-col space-y-6 mt-8">
+                <div className="flex flex-col h-full">
                   {/* Mobile CTA Buttons */}
-                  <div className="space-y-3">
+                  <div className="space-y-3 mt-8">
                     <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
                       Open an Account
                     </Button>
@@ -151,25 +152,27 @@ const Header = () => {
                     </Button>
                   </div>
 
-                  {/* Mobile Navigation */}
-                  <div className="space-y-4">
-                    {navigationItems.map((item) => (
-                      <div key={item.title} className="space-y-2">
-                        <h3 className="text-[#ffd700] font-medium text-lg">{item.title}</h3>
-                        <div className="pl-4 space-y-2">
-                          {item.items.map((subItem) => (
-                            <a
-                              key={subItem}
-                              href="#"
-                              className="block text-gray-300 hover:text-white transition-colors"
-                            >
-                              {subItem}
-                            </a>
-                          ))}
+                  {/* Scrollable Mobile Navigation */}
+                  <ScrollArea className="flex-1 mt-6">
+                    <div className="space-y-4 pr-4">
+                      {navigationItems.map((item) => (
+                        <div key={item.title} className="space-y-2">
+                          <h3 className="text-[#ffd700] font-medium text-lg">{item.title}</h3>
+                          <div className="pl-4 space-y-2">
+                            {item.items.map((subItem) => (
+                              <a
+                                key={subItem}
+                                href="#"
+                                className="block text-gray-300 hover:text-white transition-colors"
+                              >
+                                {subItem}
+                              </a>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  </ScrollArea>
 
                   {/* Mobile Utilities */}
                   <div className="pt-6 border-t border-gray-800 space-y-4">
