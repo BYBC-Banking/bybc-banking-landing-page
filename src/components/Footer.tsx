@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download, HuaweiAppgallery } from "lucide-react";
+import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -99,7 +100,14 @@ const Footer = () => {
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
                   <div className="flex items-center justify-center w-8 h-8">
                     <svg viewBox="0 0 24 24" className="w-6 h-6">
-                      <path fill="#FF6B35" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      <defs>
+                        <linearGradient id="huaweiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#FF6B35" />
+                          <stop offset="50%" stopColor="#F7931E" />
+                          <stop offset="100%" stopColor="#FFD700" />
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#huaweiGradient)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                     </svg>
                   </div>
                   <div className="text-left">
