@@ -2,13 +2,44 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowLeft, Search, MessageCircle, BookOpen, FileText, Lightbulb, HelpCircle, Phone } from 'lucide-react';
+import { ArrowLeft, Search, MessageCircle, BookOpen, FileText, Lightbulb, HelpCircle, Phone, TrendingUp, Users, Bot, Newspaper } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Learn = () => {
   const [searchQuery, setSearchQuery] = useState('');
+
+  const learningServices = [
+    {
+      icon: BookOpen,
+      title: "Financial Education",
+      description: "Beginner finance cards (budgeting, credit)",
+      features: ["Budgeting basics", "Credit management", "Saving strategies", "Debt management"],
+      cta: "Start Learning"
+    },
+    {
+      icon: TrendingUp,
+      title: "Investment Guides",
+      description: "Compound growth explanation, risk sliders",
+      features: ["Investment basics", "Risk assessment", "Portfolio building", "Market analysis"],
+      cta: "Explore Guides"
+    },
+    {
+      icon: Users,
+      title: "Banking Tutorials",
+      description: "BYBC feature walkthroughs and onboarding",
+      features: ["Account setup", "Mobile app guide", "Transfer tutorials", "Security features"],
+      cta: "Watch Tutorials"
+    },
+    {
+      icon: Newspaper,
+      title: "Market Insights",
+      description: "News blog, economy summaries, AI-curated posts",
+      features: ["Daily market news", "Economic updates", "AI analysis", "Expert opinions"],
+      cta: "Read Insights"
+    }
+  ];
 
   const faqs = [
     {
@@ -91,10 +122,10 @@ const Learn = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-light mb-6">
-              Help <span className="text-[#ffd700]">Center</span>
+              Learn & <span className="text-[#ffd700]">Support</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers, get support, and learn everything you need to know about BYBC.
+              Find answers, get support, and learn everything you need to know about BYBC and financial management.
             </p>
             
             {/* Search Bar */}
@@ -109,6 +140,32 @@ const Learn = () => {
                   className="w-full pl-12 pr-4 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ffd700] transition-colors"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Learning Services */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-light text-center mb-12">Learning <span className="text-[#ffd700]">Resources</span></h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {learningServices.map((service) => (
+                <Card key={service.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
+                      <service.icon className="w-6 h-6 text-[#ffd700]" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                    <ul className="text-gray-400 space-y-1 text-sm mb-6">
+                      {service.features.map((feature, index) => (
+                        <li key={index}>• {feature}</li>
+                      ))}
+                    </ul>
+                    <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
+                      {service.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
@@ -138,7 +195,7 @@ const Learn = () => {
 
             <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 cursor-pointer">
               <CardContent className="p-6 text-center">
-                <Lightbulb className="w-12 h-12 text-[#ffd700] mx-auto mb-4" />
+                <Bot className="w-12 h-12 text-[#ffd700] mx-auto mb-4" />
                 <h3 className="text-lg font-medium mb-2">Ask Lana</h3>
                 <p className="text-gray-300 text-sm mb-4">Get instant answers from our AI assistant</p>
                 <Button className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">

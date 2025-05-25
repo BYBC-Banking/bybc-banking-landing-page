@@ -2,13 +2,44 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowLeft, BookOpen, Video, Award, Calculator, TrendingUp, DollarSign } from 'lucide-react';
+import { ArrowLeft, BookOpen, Video, Award, Calculator, TrendingUp, DollarSign, GraduationCap, Users, CreditCard, Gift } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Education = () => {
   const [progress, setProgress] = useState(65);
+
+  const educationServices = [
+    {
+      icon: GraduationCap,
+      title: "Student Accounts",
+      description: "No-fee banking with budgeting tools",
+      features: ["Zero monthly fees", "Budgeting tools", "Student discounts", "Mobile banking"],
+      cta: "Apply Now"
+    },
+    {
+      icon: CreditCard,
+      title: "Education Loans",
+      description: "Smart application preview, interest simulation",
+      features: ["Competitive rates", "Flexible repayment", "Quick approval", "Study abroad support"],
+      cta: "Apply for Loan"
+    },
+    {
+      icon: DollarSign,
+      title: "Financial Loans",
+      description: "Support for study-related financial gaps",
+      features: ["Emergency funding", "Equipment loans", "Accommodation loans", "Living expenses"],
+      cta: "Learn More"
+    },
+    {
+      icon: Gift,
+      title: "Scholarships",
+      description: "Directory of supported grants and how to apply",
+      features: ["Merit-based grants", "Need-based support", "Application guidance", "Success tracking"],
+      cta: "Browse Scholarships"
+    }
+  ];
 
   const learningContent = [
     {
@@ -85,8 +116,34 @@ const Education = () => {
               Financial <span className="text-[#ffd700]">Education</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Build your financial knowledge with interactive courses, tools, and resources designed for every level.
+              Build your financial knowledge with interactive courses, tools, and resources designed for students and lifelong learners.
             </p>
+          </div>
+
+          {/* Education Services */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-light text-center mb-12">Education <span className="text-[#ffd700]">Services</span></h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {educationServices.map((service) => (
+                <Card key={service.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
+                      <service.icon className="w-6 h-6 text-[#ffd700]" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                    <ul className="text-gray-400 space-y-1 text-sm mb-6">
+                      {service.features.map((feature, index) => (
+                        <li key={index}>• {feature}</li>
+                      ))}
+                    </ul>
+                    <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
+                      {service.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Progress Tracker */}

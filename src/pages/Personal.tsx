@@ -2,12 +2,50 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowLeft, Wallet, PiggyBank, Bot, Smartphone, DollarSign } from 'lucide-react';
+import { ArrowLeft, Wallet, PiggyBank, Bot, Smartphone, DollarSign, Clock, CreditCard, Home, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Personal = () => {
+  const accountTypes = [
+    {
+      icon: Wallet,
+      title: "Savings Account",
+      description: "Benefits, interest tiers, auto-save options",
+      features: ["Up to 8% interest", "Auto-save features", "Goal tracking", "Flexible withdrawals"],
+      cta: "Apply Now"
+    },
+    {
+      icon: PiggyBank,
+      title: "Current Account",
+      description: "Real-time transfers, debit cards, low fees",
+      features: ["No monthly fees", "Instant payments", "Global access", "Real-time notifications"],
+      cta: "Apply Now"
+    },
+    {
+      icon: Clock,
+      title: "Fixed Deposits",
+      description: "Term lock-in options and projected returns",
+      features: ["Fixed interest rates", "Term options 3-60 months", "Guaranteed returns", "Early withdrawal options"],
+      cta: "Learn More"
+    },
+    {
+      icon: CreditCard,
+      title: "Personal Loans",
+      description: "Eligibility checker and repayment estimator",
+      features: ["Competitive rates", "Quick approval", "Flexible terms", "Online application"],
+      cta: "Check Eligibility"
+    },
+    {
+      icon: Home,
+      title: "Home Loans",
+      description: "Flexible options, how to qualify, and documents needed",
+      features: ["Up to 100% financing", "Fixed & variable rates", "Pre-approval available", "Expert guidance"],
+      cta: "Learn More"
+    }
+  ];
+
   const features = [
     {
       icon: Bot,
@@ -46,53 +84,34 @@ const Personal = () => {
               Personal <span className="text-[#ffd700]">Banking</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Experience modern banking designed for your personal financial needs with our Spending and Savings accounts.
+              Experience modern banking designed for your personal financial needs with comprehensive account options and lending solutions.
             </p>
           </div>
 
-          {/* Account Types */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center">
-                    <Wallet className="w-8 h-8 text-[#ffd700]" />
-                  </div>
-                  <h3 className="text-2xl font-medium">Spending Account</h3>
-                </div>
-                <p className="text-gray-300 mb-6">Your everyday account for payments, transfers, and daily banking needs.</p>
-                <ul className="text-gray-400 space-y-2 mb-8">
-                  <li>• No monthly fees</li>
-                  <li>• Instant payments</li>
-                  <li>• Global access</li>
-                  <li>• Real-time notifications</li>
-                </ul>
-                <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
-                  Get Started
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center">
-                    <PiggyBank className="w-8 h-8 text-[#ffd700]" />
-                  </div>
-                  <h3 className="text-2xl font-medium">Savings Account</h3>
-                </div>
-                <p className="text-gray-300 mb-6">High-interest savings with smart goals and automated saving features.</p>
-                <ul className="text-gray-400 space-y-2 mb-8">
-                  <li>• Up to 8% interest</li>
-                  <li>• Auto-save features</li>
-                  <li>• Goal tracking</li>
-                  <li>• Flexible withdrawals</li>
-                </ul>
-                <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
-                  Get Started
-                </Button>
-              </CardContent>
-            </Card>
+          {/* Account Types and Services */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-light text-center mb-12">Our <span className="text-[#ffd700]">Services</span></h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {accountTypes.map((account) => (
+                <Card key={account.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
+                      <account.icon className="w-6 h-6 text-[#ffd700]" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-3">{account.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{account.description}</p>
+                    <ul className="text-gray-400 space-y-1 text-sm mb-6">
+                      {account.features.map((feature, index) => (
+                        <li key={index}>• {feature}</li>
+                      ))}
+                    </ul>
+                    <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
+                      {account.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Features */}
@@ -111,6 +130,24 @@ const Personal = () => {
                 </Card>
               ))}
             </div>
+          </div>
+
+          {/* Loan Calculator Section */}
+          <div className="mb-16">
+            <Card className="bg-gradient-to-r from-gray-900 to-gray-800 border-gray-700">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <Calculator className="w-16 h-16 text-[#ffd700] mx-auto mb-4" />
+                  <h2 className="text-2xl font-medium mb-4">Loan Calculator</h2>
+                  <p className="text-gray-300 mb-6">
+                    Calculate your monthly repayments for personal and home loans with our interactive calculator.
+                  </p>
+                  <Button className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
+                    Calculate Now
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* CTA Section */}

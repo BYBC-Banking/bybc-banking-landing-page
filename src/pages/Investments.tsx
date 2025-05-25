@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowLeft, TrendingUp, Bitcoin, Building2, PieChart, BarChart3, DollarSign } from 'lucide-react';
+import { ArrowLeft, TrendingUp, Bitcoin, Building2, PieChart, BarChart3, DollarSign, Clock, Shield, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import Header from '@/components/Header';
@@ -16,6 +16,37 @@ const Investments = () => {
     { name: 'Apr', value: 135 },
     { name: 'May', value: 160 },
     { name: 'Jun', value: 180 },
+  ];
+
+  const investmentServices = [
+    {
+      icon: TrendingUp,
+      title: "Unit Trusts",
+      description: "Description, growth visuals, risk-based categories",
+      features: ["Diversified portfolios", "Professional management", "Risk categories", "Low minimum investment"],
+      cta: "Invest Now"
+    },
+    {
+      icon: Clock,
+      title: "Retirement Annuities",
+      description: "Time horizon planning, benefit explanation",
+      features: ["Tax benefits", "Long-term growth", "Flexible contributions", "Retirement planning"],
+      cta: "Plan Retirement"
+    },
+    {
+      icon: Shield,
+      title: "Tax-Free Savings",
+      description: "Tax-saving calculator, deposit limits",
+      features: ["Tax-free growth", "Annual limit R36,000", "No capital gains tax", "Flexible withdrawals"],
+      cta: "Calculate Savings"
+    },
+    {
+      icon: BarChart3,
+      title: "Share Trading",
+      description: "Stock search interface, sparkline charts",
+      features: ["Real-time quotes", "Advanced charts", "Research tools", "Mobile trading"],
+      cta: "Start Trading"
+    }
   ];
 
   const investmentOptions = [
@@ -59,7 +90,7 @@ const Investments = () => {
               Investment <span className="text-[#ffd700]">Platform</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Access stocks, ETFs, and crypto with professional-grade analytics and zero trading fees.
+              Access stocks, ETFs, unit trusts, and crypto with professional-grade analytics and zero trading fees.
             </p>
           </div>
 
@@ -108,9 +139,35 @@ const Investments = () => {
             </Card>
           </div>
 
+          {/* Investment Services */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-light text-center mb-12">Investment <span className="text-[#ffd700]">Services</span></h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {investmentServices.map((service) => (
+                <Card key={service.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
+                      <service.icon className="w-6 h-6 text-[#ffd700]" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                    <ul className="text-gray-400 space-y-1 text-sm mb-6">
+                      {service.features.map((feature, index) => (
+                        <li key={index}>• {feature}</li>
+                      ))}
+                    </ul>
+                    <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
+                      {service.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
           {/* Investment Options */}
           <div className="mb-16">
-            <h2 className="text-3xl font-light text-center mb-12">Investment <span className="text-[#ffd700]">Options</span></h2>
+            <h2 className="text-3xl font-light text-center mb-12">Trading <span className="text-[#ffd700]">Options</span></h2>
             <div className="grid md:grid-cols-3 gap-8">
               {investmentOptions.map((option) => (
                 <Card key={option.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
