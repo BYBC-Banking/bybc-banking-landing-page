@@ -66,15 +66,7 @@ const DesktopNavigation = ({ navigationItems }: DesktopNavigationProps) => {
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center space-x-2 text-white hover:text-[#ffd700] transition-colors">
             {/* South African Flag SVG */}
-            <svg width="24" height="16" viewBox="0 0 24 16" className="rounded-sm">
-              <rect width="24" height="16" fill="#000C8A"/>
-              <polygon points="0,0 8,8 0,16" fill="#000"/>
-              <polygon points="0,0 12,6 8,8 0,6" fill="#FFB612"/>
-              <polygon points="0,6 8,8 12,6 24,6 24,0 12,0" fill="#FFFFFF"/>
-              <polygon points="0,10 8,8 12,10 24,10 24,16 12,16" fill="#FFFFFF"/>
-              <polygon points="8,8 12,6 24,6 24,10 12,10" fill="#E03C31"/>
-              <polygon points="0,10 12,10 8,8 0,16" fill="#007749"/>
-            </svg>
+            <span className="text-lg">🇿🇦</span>
             <ChevronDown className="w-4 h-4" />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-gray-900 border-gray-700 z-50">
