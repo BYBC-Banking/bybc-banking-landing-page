@@ -31,7 +31,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-[#0f0f23] to-[#1a1a3a]">
+    <section className="py-24 px-4 bg-gradient-to-b from-[#0f0f23] to-[#1a1a3a] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6">
@@ -43,26 +43,26 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {features.map((feature, index) => (
-            <Card key={feature.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 group">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#ffd700] group-hover:bg-opacity-20 transition-all duration-300">
-                    <feature.icon className="w-8 h-8 text-[#ffd700]" />
+            <Card key={feature.title} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 group w-full">
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#ffd700] group-hover:bg-opacity-20 transition-all duration-300">
+                    <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#ffd700]" />
                   </div>
                   
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <h3 className="text-xl font-medium text-white">{feature.title}</h3>
-                      <span className="text-xs bg-[#ffd700] text-[#0f0f23] px-2 py-1 rounded-full font-medium">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 flex-wrap">
+                      <h3 className="text-lg sm:text-xl font-medium text-white break-words">{feature.title}</h3>
+                      <span className="text-xs bg-[#ffd700] text-[#0f0f23] px-2 py-1 rounded-full font-medium whitespace-nowrap">
                         {feature.highlight}
                       </span>
                     </div>
                     
-                    <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{feature.description}</p>
                     
-                    <div className="mt-6">
+                    <div className="mt-4 sm:mt-6">
                       <button className="text-[#ffd700] text-sm font-medium hover:underline transition-all duration-300 lg:hover:bg-white lg:hover:bg-opacity-5 lg:hover:px-2 lg:hover:py-1 lg:hover:rounded">
                         Explore Feature →
                       </button>
