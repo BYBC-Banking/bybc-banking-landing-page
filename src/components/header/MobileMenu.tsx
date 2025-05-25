@@ -77,7 +77,13 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen, navigationItems }: 
                 <span>Search</span>
               </button>
               <button className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
-                <div className="w-6 h-4 bg-gradient-to-b from-green-500 via-yellow-500 to-blue-500 rounded-sm"></div>
+                <img
+                  src="https://flagcdn.com/w40/za.png"
+                  alt="South African Flag"
+                  width="24"
+                  height="16"
+                  className="rounded-sm"
+                />
                 <span>South Africa (EN)</span>
               </button>
             </div>
