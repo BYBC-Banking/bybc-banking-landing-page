@@ -98,7 +98,7 @@ const Personal = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <account.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-xl font-medium mb-3">{account.title}</h3>
+                    <h3 className="text-white text-xl font-medium mb-3">{account.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">{account.description}</p>
                     <ul className="text-gray-400 space-y-1 text-sm mb-6">
                       {account.features.map((feature, index) => (
