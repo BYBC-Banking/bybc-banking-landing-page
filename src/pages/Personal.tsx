@@ -138,7 +138,7 @@ const Personal = () => {
               <CardContent className="p-8">
                 <div className="text-center">
                   <Calculator className="w-16 h-16 text-[#ffd700] mx-auto mb-4" />
-                  <h2 className="text-2xl font-medium mb-4">Loan Calculator</h2>
+                  <h2 className="text-white text-2xl font-medium mb-4">Loan Calculator</h2>
                   <p className="text-gray-300 mb-6">
                     Calculate your monthly repayments for personal and home loans with our interactive calculator.
                   </p>
