@@ -59,11 +59,74 @@ const Header = () => {
       {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Mobile Menu Button - Left Side */}
+          <div className="lg:hidden">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-white">
+                  <Menu className="w-6 h-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-[#0f0f23] border-gray-800 w-80">
+                <div className="flex flex-col h-full">
+                  {/* Mobile CTA Buttons */}
+                  <div className="space-y-3 mt-8">
+                    <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
+                      Open an Account
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full bg-transparent border-gray-600 text-white hover:bg-gray-800"
+                    >
+                      Sign In
+                    </Button>
+                  </div>
+
+                  {/* Scrollable Mobile Navigation */}
+                  <ScrollArea className="flex-1 mt-6">
+                    <div className="space-y-4 pr-4">
+                      {navigationItems.map((item) => (
+                        <div key={item.title} className="space-y-2">
+                          <h3 className="text-[#ffd700] font-medium text-lg">{item.title}</h3>
+                          <div className="pl-4 space-y-2">
+                            {item.items.map((subItem) => (
+                              <a
+                                key={subItem}
+                                href="#"
+                                className="block text-gray-300 hover:text-white transition-colors"
+                              >
+                                {subItem}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </ScrollArea>
+
+                  {/* Mobile Utilities */}
+                  <div className="pt-6 border-t border-gray-800 space-y-4">
+                    <button className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
+                      <Search className="w-5 h-5" />
+                      <span>Search</span>
+                    </button>
+                    <button className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
+                      <div className="w-6 h-4 bg-gradient-to-b from-green-500 via-yellow-500 to-blue-500 rounded-sm"></div>
+                      <span>South Africa (EN)</span>
+                    </button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+
+          {/* Logo - Center-Left */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-white">
-              <span className="text-[#ffd700]">BYBC</span>
-            </div>
+            <img 
+              src="/lovable-uploads/a7514caf-247b-475e-9429-8e5837ee4959.png" 
+              alt="BYBC Banking" 
+              className="h-8 w-8"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -127,67 +190,6 @@ const Header = () => {
             <Button className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
               Open an Account
             </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white">
-                  <Menu className="w-6 h-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="bg-[#0f0f23] border-gray-800 w-80">
-                <div className="flex flex-col h-full">
-                  {/* Mobile CTA Buttons */}
-                  <div className="space-y-3 mt-8">
-                    <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
-                      Open an Account
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      className="w-full bg-transparent border-gray-600 text-white hover:bg-gray-800"
-                    >
-                      Sign In
-                    </Button>
-                  </div>
-
-                  {/* Scrollable Mobile Navigation */}
-                  <ScrollArea className="flex-1 mt-6">
-                    <div className="space-y-4 pr-4">
-                      {navigationItems.map((item) => (
-                        <div key={item.title} className="space-y-2">
-                          <h3 className="text-[#ffd700] font-medium text-lg">{item.title}</h3>
-                          <div className="pl-4 space-y-2">
-                            {item.items.map((subItem) => (
-                              <a
-                                key={subItem}
-                                href="#"
-                                className="block text-gray-300 hover:text-white transition-colors"
-                              >
-                                {subItem}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </ScrollArea>
-
-                  {/* Mobile Utilities */}
-                  <div className="pt-6 border-t border-gray-800 space-y-4">
-                    <button className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
-                      <Search className="w-5 h-5" />
-                      <span>Search</span>
-                    </button>
-                    <button className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
-                      <div className="w-6 h-4 bg-gradient-to-b from-green-500 via-yellow-500 to-blue-500 rounded-sm"></div>
-                      <span>South Africa (EN)</span>
-                    </button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </div>
