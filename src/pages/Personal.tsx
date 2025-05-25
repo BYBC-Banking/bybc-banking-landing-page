@@ -159,9 +159,13 @@ const Personal = () => {
                 <Button className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
                   Compare Plans
                 </Button>
-                <Button variant="outline" className="border-gray-600 hover:bg-gray-800">
+                <Button
+                  variant="outline"
+                  className="w-full border-gray-700 hover:bg-[#ffd700] hover:text-[#0f0f23] hover:border-[#ffd700] transition-all duration-300"
+                >
                   Get Started
                 </Button>
+
               </div>
             </div>
           </div>
