@@ -17,6 +17,7 @@ import {
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
 import { Menu, Search, ChevronDown, Send, CreditCard, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,26 +25,32 @@ const Header = () => {
   const navigationItems = [
     {
       title: 'Personal',
+      path: '/personal',
       items: ['Savings Account', 'Current Account', 'Fixed Deposits', 'Personal Loans', 'Home Loans']
     },
     {
       title: 'Business',
+      path: '/business',
       items: ['Business Account', 'Business Loans', 'Merchant Services', 'Treasury Solutions']
     },
     {
       title: 'Non-Profit',
+      path: '/non-profit',
       items: ['NGO Banking', 'Donor Management', 'Impact Reporting', 'Fundraising Tools']
     },
     {
       title: 'Investments',
+      path: '/investments',
       items: ['Unit Trusts', 'Retirement Annuities', 'Tax-Free Savings', 'Share Trading']
     },
     {
       title: 'Education',
+      path: '/education',
       items: ['Student Accounts', 'Education Loans', 'Financial Literacy', 'Scholarships']
     },
     {
       title: 'Learn',
+      path: '/learn',
       items: ['Financial Education', 'Investment Guides', 'Banking Tutorials', 'Market Insights']
     }
   ];
@@ -87,7 +94,13 @@ const Header = () => {
                     <div className="space-y-4 pr-4">
                       {navigationItems.map((item) => (
                         <div key={item.title} className="space-y-2">
-                          <h3 className="text-[#ffd700] font-medium text-lg">{item.title}</h3>
+                          <Link 
+                            to={item.path}
+                            className="text-[#ffd700] font-medium text-lg hover:text-white transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.title}
+                          </Link>
                           <div className="pl-4 space-y-2">
                             {item.items.map((subItem) => (
                               <a
@@ -120,13 +133,16 @@ const Header = () => {
             </Sheet>
           </div>
 
-          {/* Logo - Center-Left */}
+          {/* Logo - Center-Left with bigger size and text */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/a7514caf-247b-475e-9429-8e5837ee4959.png" 
-              alt="BYBC Banking" 
-              className="h-8 w-8"
-            />
+            <Link to="/" className="flex items-center gap-3">
+              <img 
+                src="/lovable-uploads/a7514caf-247b-475e-9429-8e5837ee4959.png" 
+                alt="BYBC Banking" 
+                className="h-10 w-10"
+              />
+              <span className="text-white font-semibold text-xl">BYBC</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -136,7 +152,7 @@ const Header = () => {
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.title}>
                     <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#ffd700] data-[state=open]:text-[#ffd700] text-sm font-medium">
-                      {item.title}
+                      <Link to={item.path}>{item.title}</Link>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="w-64 p-4 bg-gray-900 border border-gray-800">

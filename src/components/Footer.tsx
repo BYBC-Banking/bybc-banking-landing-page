@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, QrCode } from "lucide-react";
+import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download, HuaweiAppgallery } from "lucide-react";
 
 const Footer = () => {
   return (
