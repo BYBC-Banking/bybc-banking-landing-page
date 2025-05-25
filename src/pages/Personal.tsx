@@ -161,7 +161,7 @@ const Personal = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-700 text-white transition-none"                >
+                  className="border-gray-700 text-white bg-transparent hover:bg-transparent transition-none"               >
                   Get Started
                 </Button>
 
