@@ -66,7 +66,13 @@ const DesktopNavigation = ({ navigationItems }: DesktopNavigationProps) => {
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center space-x-2 text-white hover:text-[#ffd700] transition-colors">
             {/* South African Flag SVG */}
-            <span className="text-lg">🇿🇦</span>
+            <img
+              src="https://flagcdn.com/w40/za.png"
+              alt="South African Flag"
+              width="24"
+              height="16"
+              className="rounded-sm"
+            />
             <ChevronDown className="w-4 h-4" />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-gray-900 border-gray-700 z-50">
