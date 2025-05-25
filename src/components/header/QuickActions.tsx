@@ -1,0 +1,39 @@
+
+import React from 'react';
+import { Send, CreditCard, Shield } from 'lucide-react';
+
+const QuickActions = () => {
+  const quickActions = [
+    { icon: Send, label: 'Send Money', tooltip: 'Transfer funds instantly' },
+    { icon: CreditCard, label: 'Credit Passport', tooltip: 'Check your credit score' },
+    { icon: Shield, label: 'Verify Identity', tooltip: 'Secure identity verification' }
+  ];
+
+  return (
+    <div className="bg-gray-900 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center space-x-8 py-3">
+          {quickActions.map((action) => (
+            <button
+              key={action.label}
+              className="group flex items-center space-x-2 px-4 py-2 rounded-full bg-transparent hover:bg-gray-800 transition-all duration-200 relative"
+              title={action.tooltip}
+            >
+              <action.icon className="w-4 h-4 text-gray-400 group-hover:text-[#ffd700] transition-colors" />
+              <span className="text-sm text-gray-400 group-hover:text-white transition-colors hidden sm:block">
+                {action.label}
+              </span>
+              
+              {/* Tooltip */}
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                {action.tooltip}
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default QuickActions;
