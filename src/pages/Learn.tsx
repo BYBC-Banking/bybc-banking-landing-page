@@ -153,7 +153,7 @@ const Learn = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <service.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <h3 className="text-white text-xl font-medium mb-3">{service.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                     <ul className="text-gray-400 space-y-1 text-sm mb-6">
                       {service.features.map((feature, index) => (
@@ -174,7 +174,7 @@ const Learn = () => {
             <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 cursor-pointer">
               <CardContent className="p-6 text-center">
                 <Phone className="w-12 h-12 text-[#ffd700] mx-auto mb-4" />
-                <h3 className="text-lg font-medium mb-2">Contact Support</h3>
+                <h3 className=" text-white text-lg font-medium mb-2">Contact Support</h3>
                 <p className="text-gray-300 text-sm mb-4">Speak with our customer service team</p>
                 <Button variant="outline" className="border-gray-600 hover:bg-gray-800">
                   Get Help Now
@@ -185,7 +185,7 @@ const Learn = () => {
             <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 cursor-pointer">
               <CardContent className="p-6 text-center">
                 <MessageCircle className="w-12 h-12 text-[#ffd700] mx-auto mb-4" />
-                <h3 className="text-lg font-medium mb-2">Live Chat</h3>
+                <h3 className="text-white text-lg font-medium mb-2">Live Chat</h3>
                 <p className="text-gray-300 text-sm mb-4">Chat with our support team in real-time</p>
                 <Button variant="outline" className="border-gray-600 hover:bg-gray-800">
                   Start Chat
@@ -196,7 +196,7 @@ const Learn = () => {
             <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 cursor-pointer">
               <CardContent className="p-6 text-center">
                 <Bot className="w-12 h-12 text-[#ffd700] mx-auto mb-4" />
-                <h3 className="text-lg font-medium mb-2">Ask Lana</h3>
+                <h3 className="text-white text-lg font-medium mb-2">Ask Lana</h3>
                 <p className="text-gray-300 text-sm mb-4">Get instant answers from our AI assistant</p>
                 <Button className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
                   Ask Lana
@@ -215,7 +215,7 @@ const Learn = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <category.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-lg font-medium mb-2">{category.title}</h3>
+                    <h3 className="text-white text-lg font-medium mb-2">{category.title}</h3>
                     <p className="text-gray-300 text-sm mb-3">{category.description}</p>
                     <span className="text-[#ffd700] text-sm font-medium">{category.articles} articles</span>
                   </CardContent>
@@ -234,7 +234,7 @@ const Learn = () => {
                     <div className="flex items-start gap-4">
                       <HelpCircle className="w-6 h-6 text-[#ffd700] mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="text-lg font-medium mb-2">{faq.question}</h3>
+                        <h3 className="text-white text-lg font-medium mb-2">{faq.question}</h3>
                         <p className="text-gray-300">{faq.answer}</p>
                       </div>
                     </div>
@@ -252,7 +252,7 @@ const Learn = () => {
                 <Card key={index} className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-medium">{update.title}</h3>
+                      <h3 className="text-white text-lg font-medium">{update.title}</h3>
                       <span className="text-gray-400 text-sm">{update.date}</span>
                     </div>
                     <p className="text-gray-300">{update.summary}</p>
@@ -268,7 +268,7 @@ const Learn = () => {
               <CardContent className="p-8">
                 <div className="text-center">
                   <BookOpen className="w-16 h-16 text-[#ffd700] mx-auto mb-4" />
-                  <h2 className="text-2xl font-medium mb-4">Financial Glossary</h2>
+                  <h2 className="text-white text-2xl font-medium mb-4">Financial Glossary</h2>
                   <p className="text-gray-300 mb-6">
                     Understand banking and financial terms with our comprehensive glossary.
                   </p>
@@ -289,7 +289,7 @@ const Learn = () => {
                 <Button className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e]">
                   Contact Support
                 </Button>
-                <Button variant="outline" className="border-gray-600 hover:bg-gray-800">
+                <Button variant="outline" className=" text-black border-gray-600 bg-white">
                   Schedule a Call
                 </Button>
               </div>
