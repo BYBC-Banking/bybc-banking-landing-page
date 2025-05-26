@@ -98,7 +98,7 @@ const Footer = () => {
                 className="w-full inline-block bg-black hover:bg-gray-900 transition-all duration-300 rounded-xl overflow-hidden"
               >
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
-                  <div className="flex items-center justify-center w-8 h-8" bg-white>
+                  <div className="flex items-center justify-center w-8 h-8 bg-white">
                     <img 
                       src="/huawei.svg" 
                       alt="Huawei AppGallery" 
