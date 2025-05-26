@@ -221,7 +221,7 @@ const Education = () => {
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                        <h3 className="text-lg font-medium mb-1">{course.title}</h3>
+                        <h3 className="text-white text-lg font-medium mb-1">{course.title}</h3>
                         <p className="text-gray-300 text-sm">{course.description}</p>
                       </div>
                       <div className="text-right">
@@ -260,7 +260,7 @@ const Education = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <Calculator className="w-8 h-8 text-[#ffd700]" />
-                    <h3 className="text-xl font-medium">Investment Calculator</h3>
+                    <h3 className="text-white text-xl font-medium">Investment Calculator</h3>
                   </div>
                   <p className="text-gray-300 mb-4">Calculate potential returns on your investments over time.</p>
                   <Button variant="outline" className="border-gray-600 hover:bg-gray-800">
