@@ -130,7 +130,7 @@ const Education = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <service.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <h3 className="text-white text-xl font-medium mb-3">{service.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                     <ul className="text-gray-400 space-y-1 text-sm mb-6">
                       {service.features.map((feature, index) => (
@@ -152,7 +152,7 @@ const Education = () => {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
-                    <h2 className="text-2xl font-medium mb-4">Your Learning Progress</h2>
+                    <h2 className="text-white text-2xl font-medium mb-4">Your Learning Progress</h2>
                     <div className="space-y-4">
                       <div className="flex justify-between">
                         <span className="text-gray-400">Overall Progress</span>
@@ -203,7 +203,7 @@ const Education = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <content.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-lg font-medium mb-2">{content.title}</h3>
+                    <h3 className="text-white text-lg font-medium mb-2">{content.title}</h3>
                     <p className="text-gray-300 text-sm mb-3">{content.description}</p>
                     <span className="text-[#ffd700] text-sm font-medium">{content.count}</span>
                   </CardContent>
