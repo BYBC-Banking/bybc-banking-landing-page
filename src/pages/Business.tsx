@@ -105,7 +105,7 @@ const Business = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <feature.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-lg font-medium mb-3">{feature.title}</h3>
+                    <h3 className="text-white text-lg font-medium mb-3">{feature.title}</h3>
                     <p className="text-gray-300 text-sm">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -119,7 +119,7 @@ const Business = () => {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
-                    <h2 className="text-3xl font-light mb-4">Credit <span className="text-[#ffd700]">Passport</span></h2>
+                    <h2 className="text-white text-3xl font-light mb-4">Credit <span className="text-[#ffd700]">Passport</span></h2>
                     <p className="text-gray-300 mb-6">
                       Build your business credit score with our Credit Passport feature. Get access to better rates, 
                       higher limits, and exclusive business opportunities through smart credit scoring.
