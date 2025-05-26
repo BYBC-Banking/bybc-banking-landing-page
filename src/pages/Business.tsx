@@ -79,7 +79,7 @@ const Business = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <service.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <h3 className="text-white text-xl font-medium mb-3">{service.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                     <ul className="text-gray-400 space-y-1 text-sm mb-6">
                       {service.features.map((feature, index) => (
