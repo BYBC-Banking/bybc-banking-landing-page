@@ -11,6 +11,8 @@ import NonProfit from "./pages/NonProfit";
 import Investments from "./pages/Investments";
 import Education from "./pages/Education";
 import Learn from "./pages/Learn";
+import VerifyIdentity from "./pages/VerifyIdentity";
+import CreditPassport from "./pages/CreditPassport";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/investments" element={<Investments />} />
           <Route path="/education" element={<Education />} />
           <Route path="/learn" element={<Learn />} />
+          <Route path="/verify-identity" element={<VerifyIdentity />} />
+          <Route path="/credit-passport" element={<CreditPassport />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
