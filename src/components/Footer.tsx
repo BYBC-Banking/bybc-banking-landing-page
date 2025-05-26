@@ -100,7 +100,7 @@ const Footer = () => {
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
                   <div className="flex items-center justify-center w-8 h-8" bg-white>
                     <img 
-                      src="https://static.cdnlogo.com/logos/h/15/huawei-appgallery.svg" 
+                      src="/huawei.svg" 
                       alt="Huawei AppGallery" 
                       className="w-6 h-6 object-contain"
                     />
