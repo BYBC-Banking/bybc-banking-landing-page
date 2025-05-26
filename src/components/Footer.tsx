@@ -98,11 +98,11 @@ const Footer = () => {
                 className="w-full inline-block bg-black hover:bg-gray-900 transition-all duration-300 rounded-xl overflow-hidden"
               >
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
-                  <div className="flex items-center justify-center w-8 h-8">
+                  <div className="flex items-center justify-center w-6 h-6" bg-white>
                     <img 
                       src="https://static.cdnlogo.com/logos/h/15/huawei-appgallery.svg" 
                       alt="Huawei AppGallery" 
-                      className="w-6 h-6"
+                      className="w-6 h-6 object-contain"
                     />
                   </div>
                   <div className="text-left">
