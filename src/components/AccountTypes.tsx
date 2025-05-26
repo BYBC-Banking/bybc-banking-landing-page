@@ -1,84 +1,120 @@
 
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wallet, PiggyBank, Building, TrendingUp, Heart } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { PiggyBank, Building2, Heart, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AccountTypes = () => {
-  const accounts = [
-    {
-      icon: Wallet,
-      title: "Spending",
-      description: "Your everyday account for payments, transfers, and daily banking needs.",
-      benefits: "No monthly fees • Instant payments • Global access"
-    },
-    {
-      icon: PiggyBank,
-      title: "Savings",
-      description: "High-interest savings with smart goals and automated saving features.",
-      benefits: "Up to 8% interest • Auto-save • Goal tracking"
-    },
-    {
-      icon: Building,
-      title: "Business",
-      description: "Comprehensive business banking with invoicing and expense management.",
-      benefits: "Business tools • Team access • API integration"
-    },
-    {
-      icon: TrendingUp,
-      title: "Investment",
-      description: "Access to stocks, ETFs, and crypto with professional-grade analytics.",
-      benefits: "Zero trading fees • Portfolio insights • Crypto wallet"
-    },
-    {
-      icon: Heart,
-      title: "Non-Profit",
-      description: "Transparent banking for NGOs with donor tracking and impact reporting.",
-      benefits: "Transparent reporting • Donor portal • Impact metrics"
-    }
-  ];
-
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-4 bg-[#0a0a1f]">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Choose Your <span className="text-[#ffd700]">Banking Experience</span>
+            Choose Your <span className="text-[#ffd700]">Banking Journey</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Five specialized account types designed for different life stages and goals, 
-            all within one seamless platform.
+            Whether you're saving for the future, growing your business, or making a difference in your community, 
+            we have the perfect account for you.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {accounts.map((account, index) => (
-            <Card key={account.title} className={`bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 hover:scale-105 ${index === 4 ? 'md:col-span-2 lg:col-span-1' : ''}`}>
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
-                    <account.icon className="w-8 h-8 text-[#ffd700]" />
-                  </div>
-                  <h3 className="text-2xl font-medium text-white mb-3">{account.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{account.description}</p>
-                </div>
-
-                <div className="mb-8">
-                  <div className="flex items-center gap-2 text-sm text-[#ffd700] mb-2">
-                    <div className="w-1.5 h-1.5 bg-[#ffd700] rounded-full" />
-                    <span>Key Benefits</span>
-                  </div>
-                  <p className="text-gray-400 text-sm">{account.benefits}</p>
-                </div>
-
-                <Button 
-                  variant="outline" 
-                  className="w-full border-gray-700 hover:bg-[#ffd700] hover:text-[#0f0f23] hover:border-[#ffd700] transition-all duration-300"
-                >
-                  Learn More
+        {/* Updated grid layout for large screens */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Personal Savings */}
+          <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 group">
+            <CardContent className="p-8">
+              <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-opacity-20 transition-all">
+                <PiggyBank className="w-8 h-8 text-[#ffd700]" />
+              </div>
+              <h3 className="text-2xl font-light mb-4 text-white">Personal Savings</h3>
+              <p className="text-gray-300 mb-6 text-sm">
+                Smart savings with competitive interest rates and automated financial planning.
+              </p>
+              <ul className="text-gray-400 space-y-2 text-sm mb-6">
+                <li>• High-yield savings accounts</li>
+                <li>• Automated saving goals</li>
+                <li>• Real-time spending insights</li>
+                <li>• Crypto portfolio integration</li>
+              </ul>
+              <Link to="/personal">
+                <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
+                  Start Saving
                 </Button>
-              </CardContent>
-            </Card>
-          ))}
+              </Link>
+            </CardContent>
+          </Card>
+
+          {/* Business Growth */}
+          <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 group">
+            <CardContent className="p-8">
+              <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-opacity-20 transition-all">
+                <Building2 className="w-8 h-8 text-[#ffd700]" />
+              </div>
+              <h3 className="text-2xl font-light mb-4 text-white">Business Growth</h3>
+              <p className="text-gray-300 mb-6 text-sm">
+                Comprehensive business banking with advanced cash flow management and lending solutions.
+              </p>
+              <ul className="text-gray-400 space-y-2 text-sm mb-6">
+                <li>• Multi-user business accounts</li>
+                <li>• Smart lending decisions</li>
+                <li>• Payment processing tools</li>
+                <li>• Treasury management</li>
+              </ul>
+              <Link to="/business">
+                <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
+                  Grow Business
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          {/* Non-Profit Impact */}
+          <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 group">
+            <CardContent className="p-8">
+              <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-opacity-20 transition-all">
+                <Heart className="w-8 h-8 text-[#ffd700]" />
+              </div>
+              <h3 className="text-2xl font-light mb-4 text-white">Non-Profit Impact</h3>
+              <p className="text-gray-300 mb-6 text-sm">
+                Transparent banking for NGOs with public ledgers and donor management tools.
+              </p>
+              <ul className="text-gray-400 space-y-2 text-sm mb-6">
+                <li>• Public transaction ledger</li>
+                <li>• Donor relationship tools</li>
+                <li>• Impact reporting dashboards</li>
+                <li>• Compliance automation</li>
+              </ul>
+              <Link to="/non-profit">
+                <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
+                  Make Impact
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          {/* Investment Opportunities */}
+          <Card className="bg-gray-900 border-gray-800 hover:border-[#ffd700] transition-all duration-300 group">
+            <CardContent className="p-8">
+              <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-opacity-20 transition-all">
+                <TrendingUp className="w-8 h-8 text-[#ffd700]" />
+              </div>
+              <h3 className="text-2xl font-light mb-4 text-white">Investment Opportunities</h3>
+              <p className="text-gray-300 mb-6 text-sm">
+                Diversified investment options with AI-powered insights and portfolio management.
+              </p>
+              <ul className="text-gray-400 space-y-2 text-sm mb-6">
+                <li>• Unit trusts & ETFs</li>
+                <li>• Retirement planning</li>
+                <li>• Tax-free savings</li>
+                <li>• Crypto integration</li>
+              </ul>
+              <Link to="/investments">
+                <Button className="w-full bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] font-semibold">
+                  Start Investing
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

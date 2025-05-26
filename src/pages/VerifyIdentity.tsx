@@ -26,16 +26,16 @@ const VerifyIdentity = () => {
       status: "pending"
     },
     {
-      icon: FileText,
-      title: "Proof of Address",
-      description: "Upload a recent utility bill, bank statement, or official document",
-      status: "pending"
-    },
-    {
       icon: Building2,
       title: "Business Verification",
       description: "Optional: Provide business registration documents if applicable",
       status: "optional"
+    },
+    {
+      icon: FileText,
+      title: "Proof of Address",
+      description: "Upload a recent utility bill, bank statement, or official document",
+      status: "pending"
     }
   ];
 
@@ -78,50 +78,62 @@ const VerifyIdentity = () => {
             <Progress value={progressPercentage} className="h-2 bg-gray-800" />
           </div>
 
-          {/* Verification Steps */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {verificationSteps.map((step, index) => (
-              <Card 
-                key={step.title} 
-                className={`bg-gray-900 border-gray-800 transition-all duration-300 ${
-                  index === currentStep ? 'border-[#ffd700] shadow-lg' : 'hover:border-gray-700'
-                }`}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 ${
-                      index < currentStep ? 'bg-green-500 bg-opacity-20' : 
-                      index === currentStep ? 'bg-[#ffd700] bg-opacity-20' : 'bg-gray-800'
-                    }`}>
-                      {index < currentStep ? (
-                        <CheckCircle className="w-6 h-6 text-green-400" />
-                      ) : (
-                        <step.icon className={`w-6 h-6 ${
-                          index === currentStep ? 'text-[#ffd700]' : 'text-gray-400'
-                        }`} />
-                      )}
-                    </div>
-                    
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <h3 className="text-lg font-medium text-white">{step.title}</h3>
-                        {step.status === "optional" && (
-                          <Badge variant="outline" className="text-xs text-gray-400 border-gray-600">
-                            Optional
-                          </Badge>
-                        )}
-                        {index < currentStep && (
-                          <Badge className="text-xs bg-green-500 text-white">
-                            Complete
-                          </Badge>
-                        )}
+          {/* Verification Steps with Progress Lines */}
+          <div className="relative mb-12">
+            <div className="grid md:grid-cols-2 gap-6">
+              {verificationSteps.map((step, index) => (
+                <div key={step.title} className="relative">
+                  <Card 
+                    className={`bg-gray-900 border-gray-800 transition-all duration-300 ${
+                      index === currentStep ? 'border-[#ffd700] shadow-lg' : 'hover:border-gray-700'
+                    }`}
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 ${
+                          index < currentStep ? 'bg-green-500 bg-opacity-20' : 
+                          index === currentStep ? 'bg-[#ffd700] bg-opacity-20' : 'bg-gray-800'
+                        }`}>
+                          {index < currentStep ? (
+                            <CheckCircle className="w-6 h-6 text-green-400" />
+                          ) : (
+                            <step.icon className={`w-6 h-6 ${
+                              index === currentStep ? 'text-[#ffd700]' : 'text-gray-400'
+                            }`} />
+                          )}
+                        </div>
+                        
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <h3 className="text-lg font-medium text-white">{step.title}</h3>
+                            {step.status === "optional" && (
+                              <Badge variant="outline" className="text-xs text-gray-400 border-gray-600">
+                                Optional
+                              </Badge>
+                            )}
+                            {index < currentStep && (
+                              <Badge className="text-xs bg-green-500 text-white">
+                                Complete
+                              </Badge>
+                            )}
+                          </div>
+                          <p className="text-gray-300 text-sm">{step.description}</p>
+                        </div>
                       </div>
-                      <p className="text-gray-300 text-sm">{step.description}</p>
+                    </CardContent>
+                  </Card>
+                  
+                  {/* Green dotted progress lines */}
+                  {index < verificationSteps.length - 1 && (
+                    <div className="hidden md:block absolute top-1/2 left-full w-6 h-0.5 transform -translate-y-1/2 z-10">
+                      <div className={`w-full h-full border-t-2 border-dotted ${
+                        index < currentStep ? 'border-green-400' : 'border-gray-600'
+                      }`}></div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Trust Statement */}

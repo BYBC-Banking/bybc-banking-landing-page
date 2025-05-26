@@ -1,12 +1,16 @@
 
 import React from 'react';
-import { Send, CreditCard, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { User, Building2, Heart, TrendingUp, GraduationCap, BookOpen } from 'lucide-react';
 
 const QuickActions = () => {
   const quickActions = [
-    { icon: Send, label: 'Send Money', tooltip: 'Transfer funds instantly' },
-    { icon: CreditCard, label: 'Credit Passport', tooltip: 'Check your credit score' },
-    { icon: Shield, label: 'Verify Identity', tooltip: 'Secure identity verification' }
+    { icon: User, label: 'Personal', path: '/personal', tooltip: 'Personal banking services' },
+    { icon: Building2, label: 'Business', path: '/business', tooltip: 'Business banking solutions' },
+    { icon: Heart, label: 'Non-Profit', path: '/non-profit', tooltip: 'Non-profit banking services' },
+    { icon: TrendingUp, label: 'Investments', path: '/investments', tooltip: 'Investment opportunities' },
+    { icon: GraduationCap, label: 'Education', path: '/education', tooltip: 'Education banking' },
+    { icon: BookOpen, label: 'Learn', path: '/learn', tooltip: 'Financial education' }
   ];
 
   return (
@@ -14,8 +18,9 @@ const QuickActions = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center space-x-8 py-3">
           {quickActions.map((action) => (
-            <button
+            <Link
               key={action.label}
+              to={action.path}
               className="group flex items-center space-x-2 px-4 py-2 rounded-full bg-transparent hover:bg-gray-800 transition-all duration-200 relative"
               title={action.tooltip}
             >
@@ -28,7 +33,7 @@ const QuickActions = () => {
               <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                 {action.tooltip}
               </div>
-            </button>
+            </Link>
           ))}
         </div>
       </div>

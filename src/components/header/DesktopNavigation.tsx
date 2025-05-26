@@ -2,19 +2,12 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { 
-  NavigationMenu, 
-  NavigationMenuContent, 
-  NavigationMenuItem, 
-  NavigationMenuList, 
-  NavigationMenuTrigger 
-} from '@/components/ui/navigation-menu';
-import { 
   DropdownMenu, 
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
-import { Search, ChevronDown } from 'lucide-react';
+import { Search, ChevronDown, Shield, CreditCard } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface NavigationItem {
@@ -30,38 +23,36 @@ interface DesktopNavigationProps {
 const DesktopNavigation = ({ navigationItems }: DesktopNavigationProps) => {
   return (
     <>
-      {/* Desktop Navigation */}
-      <div className="hidden lg:flex items-center space-x-8">
-        <NavigationMenu>
-          <NavigationMenuList className="space-x-6">
-            {navigationItems.map((item) => (
-              <NavigationMenuItem key={item.title}>
-                <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#ffd700] data-[state=open]:text-[#ffd700] text-sm font-medium border-none shadow-none">
-                  <Link to={item.path} className="text-white hover:text-[#ffd700] font-semibold">
-                    {item.title}
-                  </Link>
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="z-50">
-                  <div className="w-64 p-4 bg-gray-900 border border-gray-700 rounded-lg shadow-xl">
-                    {item.items.map((subItem) => (
-                      <a
-                        key={subItem}
-                        href="#"
-                        className="block px-3 py-2 text-sm text-gray-300 hover:text-[#ffd700] hover:bg-gray-800 rounded transition-colors"
-                      >
-                        {subItem}
-                      </a>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
+      {/* Desktop Navigation - Hidden on large screens, replaced by QuickActions */}
+      <div className="hidden md:flex lg:hidden items-center space-x-8">
+        {navigationItems.map((item) => (
+          <Link 
+            key={item.title}
+            to={item.path} 
+            className="text-white hover:text-[#ffd700] font-semibold text-sm transition-colors"
+          >
+            {item.title}
+          </Link>
+        ))}
       </div>
 
       {/* Desktop Right Section */}
       <div className="hidden lg:flex items-center space-x-4">
+        {/* Quick Action Buttons for Verify Identity and Credit Passport */}
+        <Link to="/verify-identity">
+          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
+            <Shield className="w-4 h-4" />
+            <span className="text-sm">Verify Identity</span>
+          </button>
+        </Link>
+        
+        <Link to="/credit-passport">
+          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
+            <CreditCard className="w-4 h-4" />
+            <span className="text-sm">Credit Passport</span>
+          </button>
+        </Link>
+
         {/* Region Selector with South African Flag */}
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center space-x-2 text-white hover:text-[#ffd700] transition-colors">
