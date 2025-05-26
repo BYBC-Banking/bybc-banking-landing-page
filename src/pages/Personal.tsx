@@ -161,7 +161,7 @@ const Personal = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-700 text-white bg-transparent hover:bg-transparent transition-none"               >
+                  className="bg-white text-[#0f0f23] border border-gray-300 hover:bg-white hover:text-[#0f0f23]"               >
                   Get Started
                 </Button>
 
