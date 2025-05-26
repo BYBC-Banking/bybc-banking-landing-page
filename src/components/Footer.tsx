@@ -99,17 +99,10 @@ const Footer = () => {
               >
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
                   <div className="flex items-center justify-center w-8 h-8">
-                    <svg viewBox="0 0 48 48" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="huaweiGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#FF6B35" />
-                          <stop offset="50%" stopColor="#F7931E" />
-                          <stop offset="100%" stopColor="#FFD700" />
-                        </linearGradient>
-                      </defs>
+                    <svg viewBox="0 0 512 512" className="w-6 h-6">
                       <path
-                        fill="url(#huaweiGradientDark)"
-                        d="M4 10c0-3.3 2.7-6 6-6h28c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6H10c-3.3 0-6-2.7-6-6V10zm24.4 10.6L33.6 15c.6-.6.6-1.6 0-2.2s-1.6-.6-2.2 0l-5.2 5.2-5.2-5.2c-.6-.6-1.6-.6-2.2 0s-.6 1.6 0 2.2l5.2 5.2-5.2 5.2c-.6.6-.6 1.6 0 2.2.3.3.7.5 1.1.5s.8-.2 1.1-.5l5.2-5.2 5.2 5.2c.3.3.7.5 1.1.5s.8-.2 1.1-.5c.6-.6.6-1.6 0-2.2l-5.2-5.2z"
+                        fill="#e60012"
+                        d="https://static.cdnlogo.com/logos/h/15/huawei-appgallery.svg"
                       />
                     </svg>
                   </div>
