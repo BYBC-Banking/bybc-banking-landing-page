@@ -99,12 +99,11 @@ const Footer = () => {
               >
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
                   <div className="flex items-center justify-center w-8 h-8">
-                    <svg viewBox="0 0 512 512" className="w-6 h-6">
-                      <path
-                        fill="#e60012"
-                        d="https://static.cdnlogo.com/logos/h/15/huawei-appgallery.svg"
-                      />
-                    </svg>
+                    <img 
+                      src="https://static.cdnlogo.com/logos/h/15/huawei-appgallery.svg" 
+                      alt="Huawei AppGallery" 
+                      className="w-6 h-6"
+                    />
                   </div>
                   <div className="text-left">
                     <div className="text-xs text-gray-400 leading-none">EXPLORE IT ON</div>
