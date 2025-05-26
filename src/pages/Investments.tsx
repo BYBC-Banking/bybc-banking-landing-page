@@ -100,7 +100,7 @@ const Investments = () => {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h2 className="text-2xl font-medium mb-4">Portfolio Performance</h2>
+                    <h2 className="text-white text-2xl font-medium mb-4">Portfolio Performance</h2>
                     <div className="space-y-4">
                       <div className="flex justify-between">
                         <span className="text-gray-400">Total Value</span>
@@ -117,7 +117,7 @@ const Investments = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium mb-4">6-Month Performance</h3>
+                    <h3 className="text-white text-lg font-medium mb-4">6-Month Performance</h3>
                     <div className="h-48">
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={data}>
@@ -149,7 +149,7 @@ const Investments = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <service.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-xl font-medium mb-3">{service.title}</h3>
+                    <h3 className="text-white text-xl font-medium mb-3">{service.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                     <ul className="text-gray-400 space-y-1 text-sm mb-6">
                       {service.features.map((feature, index) => (
@@ -175,7 +175,7 @@ const Investments = () => {
                     <div className="w-12 h-12 bg-[#ffd700] bg-opacity-10 rounded-2xl flex items-center justify-center mb-4">
                       <option.icon className="w-6 h-6 text-[#ffd700]" />
                     </div>
-                    <h3 className="text-lg font-medium mb-3">{option.title}</h3>
+                    <h3 className="text-white text-lg font-medium mb-3">{option.title}</h3>
                     <p className="text-gray-300 text-sm mb-4">{option.description}</p>
                     <ul className="space-y-1">
                       {option.features.map((feature, index) => (
@@ -196,7 +196,7 @@ const Investments = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <BarChart3 className="w-8 h-8 text-[#ffd700]" />
-                    <h3 className="text-xl font-medium">Advanced Analytics</h3>
+                    <h3 className="text-white text-xl font-medium">Advanced Analytics</h3>
                   </div>
                   <p className="text-gray-300 mb-4">Professional-grade tools for market analysis and portfolio optimization.</p>
                   <ul className="text-gray-400 space-y-1 text-sm">
@@ -211,7 +211,7 @@ const Investments = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <DollarSign className="w-8 h-8 text-[#ffd700]" />
-                    <h3 className="text-xl font-medium">Zero Trading Fees</h3>
+                    <h3 className="text-white text-xl font-medium">Zero Trading Fees</h3>
                   </div>
                   <p className="text-gray-300 mb-4">Trade without worrying about fees eating into your returns.</p>
                   <ul className="text-gray-400 space-y-1 text-sm">
