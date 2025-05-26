@@ -103,6 +103,7 @@ const Footer = () => {
                       src="/huawei.svg" 
                       alt="Huawei AppGallery" 
                       className="w-6 h-6 object-contain"
+                      loading="lazy"
                     />
                   </div>
                   <div className="text-left">
