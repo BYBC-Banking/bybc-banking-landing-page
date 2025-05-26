@@ -99,7 +99,7 @@ const Footer = () => {
               >
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
                   <div className="flex items-center justify-center w-8 h-8">
-                    <svg viewBox="0 0 24 24" className="w-6 h-6">
+                    <svg viewBox="0 0 48 48" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
                       <defs>
                         <linearGradient id="huaweiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#FF6B35" />
@@ -107,7 +107,10 @@ const Footer = () => {
                           <stop offset="100%" stopColor="#FFD700" />
                         </linearGradient>
                       </defs>
-                      <path fill="url(#huaweiGradient)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                      <path
+                        fill="url(#huaweiGradient)"
+                        d="M4 10c0-3.3 2.7-6 6-6h28c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6H10c-3.3 0-6-2.7-6-6V10zm24.4 10.6L33.6 15c.6-.6.6-1.6 0-2.2s-1.6-.6-2.2 0l-5.2 5.2-5.2-5.2c-.6-.6-1.6-.6-2.2 0s-.6 1.6 0 2.2l5.2 5.2-5.2 5.2c-.6.6-.6 1.6 0 2.2.3.3.7.5 1.1.5s.8-.2 1.1-.5l5.2-5.2 5.2 5.2c.3.3.7.5 1.1.5s.8-.2 1.1-.5c.6-.6.6-1.6 0-2.2l-5.2-5.2z"
+                      />
                     </svg>
                   </div>
                   <div className="text-left">
@@ -161,7 +164,7 @@ const Footer = () => {
               Digital Banking for South Africa's Future
             </p>
             <p className="text-gray-500 text-xs mt-2">
-              © 2024 BYBC Banking. All rights reserved.
+              © 2025 BYBC Banking. All rights reserved.
             </p>
           </div>
         </div>
