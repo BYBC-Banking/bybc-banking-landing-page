@@ -139,8 +139,8 @@ const AppPreview = () => {
               </div>
             </div>
 
-            {/* Navigation buttons - positioned to be visible on mobile */}
-            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 lg:-left-16">
+            {/* Navigation buttons - closer to phone on large screens */}
+            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 xl:-left-8">
               <Button
                 onClick={prevScreen}
                 variant="outline"
@@ -151,7 +151,7 @@ const AppPreview = () => {
               </Button>
             </div>
             
-            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 lg:-right-16">
+            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 xl:-right-8">
               <Button
                 onClick={nextScreen}
                 variant="outline"

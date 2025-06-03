@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Shield, Upload, Camera, FileText, Building2, CheckCircle, Lock } from 'lucide-react';
+import { ArrowLeft, Shield, Upload, Camera, FileText, Building2, CheckCircle, Lock, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -26,20 +26,25 @@ const VerifyIdentity = () => {
       status: "pending"
     },
     {
-      icon: Building2,
-      title: "Business Verification",
-      description: "Optional: Provide business registration documents if applicable",
-      status: "optional"
-    },
-    {
       icon: FileText,
       title: "Proof of Address",
       description: "Upload a recent utility bill, bank statement, or official document",
       status: "pending"
+    },
+    {
+      icon: Building2,
+      title: "Business Verification",
+      description: "Optional: Provide business registration documents if applicable",
+      status: "optional"
     }
   ];
 
   const progressPercentage = (currentStep / (verificationSteps.length - 1)) * 100;
+
+  const handleChatClick = () => {
+    // Chat functionality - could open a modal or redirect to chat
+    console.log('Chat button clicked');
+  };
 
   return (
     <div className="min-h-screen bg-[#0f0f23] text-white">
@@ -123,7 +128,7 @@ const VerifyIdentity = () => {
                     </CardContent>
                   </Card>
                   
-                  {/* Green dotted progress lines */}
+                  {/* Green dotted progress lines connecting steps in sequence */}
                   {index < verificationSteps.length - 1 && (
                     <div className="hidden md:block absolute top-1/2 left-full w-6 h-0.5 transform -translate-y-1/2 z-10">
                       <div className={`w-full h-full border-t-2 border-dotted ${
@@ -168,6 +173,16 @@ const VerifyIdentity = () => {
           </div>
         </div>
       </main>
+
+      {/* Floating Chat Button */}
+      <div className="fixed bottom-20 left-4">
+        <Button 
+          onClick={handleChatClick}
+          className="bg-[#ffd700] text-[#0f0f23] hover:bg-[#ffed4e] shadow-lg rounded-full w-14 h-14 p-0"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </Button>
+      </div>
 
       {/* Sticky CTA */}
       <div className="fixed bottom-4 right-4">
