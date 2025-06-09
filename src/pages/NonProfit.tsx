@@ -170,7 +170,7 @@ const NonProfit = () => {
                 <div className="w-16 h-16 bg-[#ffd700] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-[#ffd700] font-bold text-xl">1</span>
                 </div>
-                <h3 className="text-lg font-medium mb-2">Register Your Cause</h3>
+                <h3 className="text-lg font-medium mb-2">Register Your Account</h3>
                 <p className="text-gray-300 text-sm">Set up your non-profit account with full compliance verification</p>
               </div>
               <div className="text-center">
