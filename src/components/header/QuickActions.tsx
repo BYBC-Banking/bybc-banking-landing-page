@@ -1,13 +1,16 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Send, CreditCard, Shield } from 'lucide-react';
+import { User, Building2, Heart, TrendingUp, GraduationCap, BookOpen } from 'lucide-react';
 
 const QuickActions = () => {
   const quickActions = [
-    { icon: Send, label: 'Send Money', path: '/send-money', tooltip: 'Send money instantly' },
-    { icon: CreditCard, label: 'Credit Passport', path: '/credit-passport', tooltip: 'Your portable credit profile' },
-    { icon: Shield, label: 'Verify Identity', path: '/verify-identity', tooltip: 'Secure identity verification' }
+    { icon: User, label: 'Personal', path: '/personal', tooltip: 'Personal banking solutions' },
+    { icon: Building2, label: 'Business', path: '/business', tooltip: 'Business banking services' },
+    { icon: Heart, label: 'Non-Profit', path: '/non-profit', tooltip: 'NGO and charity banking' },
+    { icon: TrendingUp, label: 'Investments', path: '/investments', tooltip: 'Investment opportunities' },
+    { icon: GraduationCap, label: 'Education', path: '/education', tooltip: 'Educational financial services' },
+    { icon: BookOpen, label: 'Learn', path: '/learn', tooltip: 'Financial education resources' }
   ];
 
   return (

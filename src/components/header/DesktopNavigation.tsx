@@ -7,7 +7,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
-import { Search, ChevronDown, Shield, CreditCard, Send } from 'lucide-react';
+import { Search, ChevronDown, User, Building2, Heart, TrendingUp, GraduationCap, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface NavigationItem {
@@ -21,59 +21,44 @@ interface DesktopNavigationProps {
 }
 
 const DesktopNavigation = ({ navigationItems }: DesktopNavigationProps) => {
+  const quickNavItems = [
+    { icon: User, label: 'Personal', path: '/personal' },
+    { icon: Building2, label: 'Business', path: '/business' },
+    { icon: Heart, label: 'Non-Profit', path: '/non-profit' },
+    { icon: TrendingUp, label: 'Investments', path: '/investments' },
+    { icon: GraduationCap, label: 'Education', path: '/education' },
+    { icon: BookOpen, label: 'Learn', path: '/learn' }
+  ];
+
   return (
     <>
       {/* Desktop Navigation - Quick Action Buttons for medium screens */}
       <div className="hidden md:flex lg:hidden items-center space-x-4">
-        <Link to="/send-money">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Send className="w-4 h-4" />
-            <span className="text-sm">Send Money</span>
-          </button>
-        </Link>
-        
-        <Link to="/credit-passport">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <CreditCard className="w-4 h-4" />
-            <span className="text-sm">Credit Passport</span>
-          </button>
-        </Link>
-
-        <Link to="/verify-identity">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Shield className="w-4 h-4" />
-            <span className="text-sm">Verify Identity</span>
-          </button>
-        </Link>
+        {quickNavItems.slice(0, 3).map((item) => (
+          <Link key={item.label} to={item.path}>
+            <button className="flex items-center space-x-2 px-3 py-2 text-foreground hover:text-[#ffd700] transition-colors">
+              <item.icon className="w-4 h-4" />
+              <span className="text-sm">{item.label}</span>
+            </button>
+          </Link>
+        ))}
       </div>
 
       {/* Desktop Right Section */}
       <div className="hidden lg:flex items-center space-x-4">
-        {/* Quick Action Buttons for Send Money, Credit Passport and Verify Identity */}
-        <Link to="/send-money">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Send className="w-4 h-4" />
-            <span className="text-sm">Send Money</span>
-          </button>
-        </Link>
-        
-        <Link to="/credit-passport">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <CreditCard className="w-4 h-4" />
-            <span className="text-sm">Credit Passport</span>
-          </button>
-        </Link>
-
-        <Link to="/verify-identity">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Shield className="w-4 h-4" />
-            <span className="text-sm">Verify Identity</span>
-          </button>
-        </Link>
+        {/* Quick Action Buttons for Personal, Business, Non-Profit, etc. */}
+        {quickNavItems.map((item) => (
+          <Link key={item.label} to={item.path}>
+            <button className="flex items-center space-x-2 px-3 py-2 text-foreground hover:text-[#ffd700] transition-colors">
+              <item.icon className="w-4 h-4" />
+              <span className="text-sm">{item.label}</span>
+            </button>
+          </Link>
+        ))}
 
         {/* Region Selector with South African Flag */}
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center space-x-2 text-white hover:text-[#ffd700] transition-colors">
+          <DropdownMenuTrigger className="flex items-center space-x-2 text-foreground hover:text-[#ffd700] transition-colors">
             {/* South African Flag SVG */}
             <img
               src="https://flagcdn.com/w40/za.png"
@@ -84,25 +69,25 @@ const DesktopNavigation = ({ navigationItems }: DesktopNavigationProps) => {
             />
             <ChevronDown className="w-4 h-4" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-gray-900 border-gray-700 z-50">
-            <DropdownMenuItem className="text-gray-300 hover:text-[#ffd700] hover:bg-gray-800">
+          <DropdownMenuContent className="bg-background border-border z-50">
+            <DropdownMenuItem className="text-foreground hover:text-[#ffd700] hover:bg-accent">
               🇿🇦 South Africa (EN)
             </DropdownMenuItem>
-            <DropdownMenuItem className="text-gray-300 hover:text-[#ffd700] hover:bg-gray-800">
+            <DropdownMenuItem className="text-foreground hover:text-[#ffd700] hover:bg-accent">
               🇿🇦 South Africa (AF)
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
         {/* Search */}
-        <button className="p-2 text-white hover:text-[#ffd700] transition-colors">
+        <button className="p-2 text-foreground hover:text-[#ffd700] transition-colors">
           <Search className="w-5 h-5" />
         </button>
 
         {/* CTA Buttons */}
         <Button 
           variant="outline" 
-          className="bg-transparent border-gray-600 text-white hover:bg-gray-800 hover:text-white"
+          className="bg-transparent border-border text-foreground hover:bg-accent hover:text-foreground"
         >
           Sign In
         </Button>
