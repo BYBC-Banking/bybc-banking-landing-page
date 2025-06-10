@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download } from "lucide-react";
 
@@ -16,7 +17,7 @@ const Footer = () => {
           </p>
 
           {/* Download buttons with QR codes */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-8xl mx-auto">
             {/* Google Play */}
             <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">
@@ -80,12 +81,12 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Huawei AppGallery */}
+            {/* AppGallery */}
             <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h3 className="text-white text-lg font-medium mb-2">Huawei Users</h3>
-                  <p className="text-gray-400 text-sm">Download from AppGallery</p>
+                  <p className="text-gray-400 text-sm">Explore on AppGallery</p>
                 </div>
                 <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                   <QrCode className="w-8 h-8 text-black" />
@@ -98,7 +99,6 @@ const Footer = () => {
               >
                 <div className="flex items-center gap-3 justify-center px-6 py-4">
                   <div className="flex items-center justify-center w-6 h-6">
-                    {/* Using a publicly accessible Huawei logo from CDN */}
                     <img 
                       src="/huawei.svg" 
                       alt="Huawei AppGallery" 
@@ -109,6 +109,34 @@ const Footer = () => {
                   <div className="text-left">
                     <div className="text-xs text-gray-400 leading-none">EXPLORE IT ON</div>
                     <div className="text-lg text-white font-medium leading-tight">AppGallery</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Huawei AppGallery - original */}
+            <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-white text-lg font-medium mb-2">All Devices</h3>
+                  <p className="text-gray-400 text-sm">Download directly</p>
+                </div>
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                  <QrCode className="w-8 h-8 text-black" />
+                </div>
+              </div>
+              
+              <a 
+                href="#"
+                className="w-full inline-block bg-black hover:bg-gray-900 transition-all duration-300 rounded-xl overflow-hidden"
+              >
+                <div className="flex items-center gap-3 justify-center px-6 py-4">
+                  <div className="flex items-center justify-center w-6 h-6">
+                    <Download className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs text-gray-400 leading-none">DOWNLOAD</div>
+                    <div className="text-lg text-white font-medium leading-tight">Direct APK</div>
                   </div>
                 </div>
               </a>
