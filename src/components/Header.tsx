@@ -54,19 +54,35 @@ const Header = () => {
       {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Mobile Menu Button - Left Side */}
-          <MobileMenu 
-            isMobileMenuOpen={isMobileMenuOpen}
-            setIsMobileMenuOpen={setIsMobileMenuOpen}
-            navigationItems={navigationItems}
-          />
+          {/* Mobile Menu Button - Left Side on small/medium screens */}
+          <div className="lg:hidden">
+            <MobileMenu 
+              isMobileMenuOpen={isMobileMenuOpen}
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
+              navigationItems={navigationItems}
+            />
+          </div>
 
-          {/* Logo - Left Side */}
-          <div className="flex items-center">
+          {/* Desktop Logo - Left Side on large screens */}
+          <div className="hidden lg:flex items-center">
             <Logo />
           </div>
 
-          {/* Header Actions - Center */}
+          {/* Header Actions - Center on small/medium screens */}
+          <div className="lg:hidden flex items-center justify-center flex-1 space-x-1">
+            {headerActions.map((item) => (
+              <Link
+                key={item.label}
+                to={item.path}
+                className="flex items-center p-2 text-white hover:text-[#ffd700] transition-colors"
+                title={item.label}
+              >
+                <item.icon className="w-4 h-4" />
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop Header Actions - Center on large screens */}
           <div className="hidden lg:flex items-center justify-center flex-1 space-x-1">
             {headerActions.map((item) => (
               <Link
@@ -80,18 +96,9 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Mobile Header Actions - Shows on medium screens */}
-          <div className="flex lg:hidden items-center space-x-1">
-            {headerActions.map((item) => (
-              <Link
-                key={item.label}
-                to={item.path}
-                className="flex items-center p-2 text-white hover:text-[#ffd700] transition-colors"
-                title={item.label}
-              >
-                <item.icon className="w-4 h-4" />
-              </Link>
-            ))}
+          {/* Mobile Logo - Right Side on small/medium screens */}
+          <div className="lg:hidden flex items-center">
+            <Logo />
           </div>
 
           {/* Desktop Navigation and Right Section */}
