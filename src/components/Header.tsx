@@ -61,21 +61,23 @@ const Header = () => {
             navigationItems={navigationItems}
           />
 
-          {/* Logo and Header Actions - Center-Left */}
-          <div className="hidden lg:flex items-center space-x-1">
+          {/* Logo - Left Side */}
+          <div className="flex items-center">
             <Logo />
-            <div className="flex items-center space-x-1 ml-8">
-              {headerActions.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors text-sm"
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span className="hidden xl:block">{item.label}</span>
-                </Link>
-              ))}
-            </div>
+          </div>
+
+          {/* Header Actions - Center */}
+          <div className="hidden lg:flex items-center justify-center flex-1 space-x-1">
+            {headerActions.map((item) => (
+              <Link
+                key={item.label}
+                to={item.path}
+                className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors text-sm"
+              >
+                <item.icon className="w-4 h-4" />
+                <span className="hidden xl:block">{item.label}</span>
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Logo - Shows only on mobile when nav items are hidden */}
