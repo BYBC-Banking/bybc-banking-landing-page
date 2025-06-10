@@ -61,12 +61,12 @@ const Header = () => {
             navigationItems={navigationItems}
           />
 
-          {/* Logo - Left Side (Desktop) */}
-          <div className="hidden lg:flex items-center">
+          {/* Logo - Left Side */}
+          <div className="flex items-center">
             <Logo />
           </div>
 
-          {/* Header Actions - Center (Desktop) */}
+          {/* Header Actions - Center */}
           <div className="hidden lg:flex items-center justify-center flex-1 space-x-1">
             {headerActions.map((item) => (
               <Link
@@ -80,8 +80,8 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Mobile Header Actions - Center on mobile/medium screens */}
-          <div className="flex lg:hidden items-center justify-center flex-1 space-x-1">
+          {/* Mobile Header Actions - Shows on medium screens */}
+          <div className="flex lg:hidden items-center space-x-1">
             {headerActions.map((item) => (
               <Link
                 key={item.label}
@@ -92,11 +92,6 @@ const Header = () => {
                 <item.icon className="w-4 h-4" />
               </Link>
             ))}
-          </div>
-
-          {/* Mobile Logo - Right side on mobile/medium screens */}
-          <div className="lg:hidden">
-            <Logo />
           </div>
 
           {/* Desktop Navigation and Right Section */}
