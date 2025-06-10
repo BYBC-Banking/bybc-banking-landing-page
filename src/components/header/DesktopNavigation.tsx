@@ -7,8 +7,7 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
-import { Search, ChevronDown, Shield, CreditCard, Send } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Search, ChevronDown } from 'lucide-react';
 
 interface NavigationItem {
   title: string;
@@ -23,54 +22,8 @@ interface DesktopNavigationProps {
 const DesktopNavigation = ({ navigationItems }: DesktopNavigationProps) => {
   return (
     <>
-      {/* Desktop Navigation - Quick Action Buttons for medium screens */}
-      <div className="hidden md:flex lg:hidden items-center space-x-4">
-        <Link to="/send-money">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Send className="w-4 h-4" />
-            <span className="text-sm">Send Money</span>
-          </button>
-        </Link>
-        
-        <Link to="/credit-passport">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <CreditCard className="w-4 h-4" />
-            <span className="text-sm">Credit Passport</span>
-          </button>
-        </Link>
-
-        <Link to="/verify-identity">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Shield className="w-4 h-4" />
-            <span className="text-sm">Verify Identity</span>
-          </button>
-        </Link>
-      </div>
-
       {/* Desktop Right Section */}
       <div className="hidden lg:flex items-center space-x-4">
-        {/* Quick Action Buttons for Send Money, Credit Passport and Verify Identity */}
-        <Link to="/send-money">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Send className="w-4 h-4" />
-            <span className="text-sm">Send Money</span>
-          </button>
-        </Link>
-        
-        <Link to="/credit-passport">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <CreditCard className="w-4 h-4" />
-            <span className="text-sm">Credit Passport</span>
-          </button>
-        </Link>
-
-        <Link to="/verify-identity">
-          <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-[#ffd700] transition-colors">
-            <Shield className="w-4 h-4" />
-            <span className="text-sm">Verify Identity</span>
-          </button>
-        </Link>
-
         {/* Region Selector with South African Flag */}
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center space-x-2 text-white hover:text-[#ffd700] transition-colors">

@@ -5,7 +5,7 @@ import MobileMenu from './header/MobileMenu';
 import DesktopNavigation from './header/DesktopNavigation';
 import QuickActions from './header/QuickActions';
 import { Link } from 'react-router-dom';
-import { User, Building2, Heart, TrendingUp, GraduationCap, BookOpen } from 'lucide-react';
+import { Send, CreditCard, Shield } from 'lucide-react';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,13 +43,10 @@ const Header = () => {
     }
   ];
 
-  const quickNavItems = [
-    { icon: User, label: 'Personal', path: '/personal' },
-    { icon: Building2, label: 'Business', path: '/business' },
-    { icon: Heart, label: 'Non-Profit', path: '/non-profit' },
-    { icon: TrendingUp, label: 'Investments', path: '/investments' },
-    { icon: GraduationCap, label: 'Education', path: '/education' },
-    { icon: BookOpen, label: 'Learn', path: '/learn' }
+  const headerActions = [
+    { icon: Send, label: 'Send Money', path: '/send-money' },
+    { icon: CreditCard, label: 'Credit Passport', path: '/credit-passport' },
+    { icon: Shield, label: 'Verify Identity', path: '/verify-identity' }
   ];
 
   return (
@@ -64,11 +61,11 @@ const Header = () => {
             navigationItems={navigationItems}
           />
 
-          {/* Navigation Items - Center-Left */}
+          {/* Logo and Header Actions - Center-Left */}
           <div className="hidden lg:flex items-center space-x-1">
             <Logo />
             <div className="flex items-center space-x-1 ml-8">
-              {quickNavItems.map((item) => (
+              {headerActions.map((item) => (
                 <Link
                   key={item.label}
                   to={item.path}

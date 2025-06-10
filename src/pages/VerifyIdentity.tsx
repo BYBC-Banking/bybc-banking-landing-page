@@ -8,9 +8,11 @@ import { ArrowLeft, Shield, Upload, Camera, FileText, Building2, CheckCircle, Lo
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
 
 const VerifyIdentity = () => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   
   const verificationSteps = [
     {
@@ -42,8 +44,7 @@ const VerifyIdentity = () => {
   const progressPercentage = (currentStep / (verificationSteps.length - 1)) * 100;
 
   const handleChatClick = () => {
-    // Chat functionality - could open a modal or redirect to chat
-    console.log('Chat button clicked');
+    setIsChatbotOpen(true);
   };
 
   return (
@@ -183,6 +184,9 @@ const VerifyIdentity = () => {
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
+
+      {/* Chatbot Component */}
+      <Chatbot isOpen={isChatbotOpen} onClose={() => setIsChatbotOpen(false)} />
 
       {/* Sticky CTA */}
       <div className="fixed bottom-4 right-4">
