@@ -80,9 +80,18 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Mobile Logo - Shows only on mobile when nav items are hidden */}
-          <div className="lg:hidden">
-            <Logo />
+          {/* Mobile Header Actions - Shows on medium screens */}
+          <div className="flex lg:hidden items-center space-x-1">
+            {headerActions.map((item) => (
+              <Link
+                key={item.label}
+                to={item.path}
+                className="flex items-center p-2 text-white hover:text-[#ffd700] transition-colors"
+                title={item.label}
+              >
+                <item.icon className="w-4 h-4" />
+              </Link>
+            ))}
           </div>
 
           {/* Desktop Navigation and Right Section */}
