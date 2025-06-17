@@ -5,15 +5,15 @@ import { User, Building2, Heart, TrendingUp, GraduationCap, BookOpen, Send, Cred
 
 const QuickActions = () => {
   const quickActions = [
-    { icon: Send, label: 'Send Money', path: '/send-money', tooltip: 'Send money to friends and family' },
-    { icon: CreditCard, label: 'Credit Passport', path: '/credit-passport', tooltip: 'Check your credit status' },
-    { icon: Shield, label: 'Verify Identity', path: '/verify-identity', tooltip: 'Verify your identity securely' },
-    { icon: User, label: 'Personal', path: '/personal', tooltip: 'Personal banking solutions' },
-    { icon: Building2, label: 'Business', path: '/business', tooltip: 'Business banking services' },
-    { icon: Heart, label: 'Non-Profit', path: '/non-profit', tooltip: 'Non-profit banking solutions' },
-    { icon: TrendingUp, label: 'Investments', path: '/investments', tooltip: 'Investment opportunities' },
-    { icon: GraduationCap, label: 'Education', path: '/education', tooltip: 'Educational banking services' },
-    { icon: BookOpen, label: 'Learn', path: '/learn', tooltip: 'Financial education resources' }
+    { icon: Send, label: 'Send Money', path: '/send-money', tooltip: 'Send money to friends and family', showOnMobile: true },
+    { icon: CreditCard, label: 'Credit Passport', path: '/credit-passport', tooltip: 'Check your credit status', showOnMobile: true },
+    { icon: Shield, label: 'Verify Identity', path: '/verify-identity', tooltip: 'Verify your identity securely', showOnMobile: true },
+    { icon: User, label: 'Personal', path: '/personal', tooltip: 'Personal banking solutions', showOnMobile: false },
+    { icon: Building2, label: 'Business', path: '/business', tooltip: 'Business banking services', showOnMobile: false },
+    { icon: Heart, label: 'Non-Profit', path: '/non-profit', tooltip: 'Non-profit banking solutions', showOnMobile: false },
+    { icon: TrendingUp, label: 'Investments', path: '/investments', tooltip: 'Investment opportunities', showOnMobile: false },
+    { icon: GraduationCap, label: 'Education', path: '/education', tooltip: 'Educational banking services', showOnMobile: false },
+    { icon: BookOpen, label: 'Learn', path: '/learn', tooltip: 'Financial education resources', showOnMobile: false }
   ];
 
   return (
@@ -24,7 +24,9 @@ const QuickActions = () => {
             <Link
               key={action.label}
               to={action.path}
-              className="group flex items-center space-x-2 px-4 py-2 rounded-full bg-transparent hover:bg-gray-800 transition-all duration-200 relative"
+              className={`group flex items-center space-x-2 px-4 py-2 rounded-full bg-transparent hover:bg-gray-800 transition-all duration-200 relative ${
+                action.showOnMobile ? '' : 'hidden sm:flex'
+              }`}
               title={action.tooltip}
             >
               <action.icon className="w-4 h-4 text-gray-400 group-hover:text-[#ffd700] transition-colors" />
