@@ -49,13 +49,21 @@ const Header = () => {
       {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Mobile Menu Button - Left Side on small/medium screens */}
-          <div className="lg:hidden">
-            <MobileMenu 
-              isMobileMenuOpen={isMobileMenuOpen}
-              setIsMobileMenuOpen={setIsMobileMenuOpen}
-              navigationItems={navigationItems}
-            />
+          {/* Left Side - Mobile Menu + Desktop Logo */}
+          <div className="flex items-center">
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+              <MobileMenu 
+                isMobileMenuOpen={isMobileMenuOpen}
+                setIsMobileMenuOpen={setIsMobileMenuOpen}
+                navigationItems={navigationItems}
+              />
+            </div>
+            
+            {/* Desktop Logo - Left Side on large screens */}
+            <div className="hidden lg:flex items-center">
+              <Logo />
+            </div>
           </div>
 
           {/* Action Buttons - Center */}
@@ -92,13 +100,16 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Logo - Right Side */}
+          {/* Right Side - Mobile Logo + Desktop Navigation */}
           <div className="flex items-center">
-            <Logo />
+            {/* Mobile Logo - Right Side on small/medium screens */}
+            <div className="lg:hidden flex items-center">
+              <Logo />
+            </div>
+            
+            {/* Desktop Navigation and Right Section */}
+            <DesktopNavigation navigationItems={navigationItems} />
           </div>
-
-          {/* Desktop Navigation and Right Section */}
-          <DesktopNavigation navigationItems={navigationItems} />
         </div>
       </div>
 
