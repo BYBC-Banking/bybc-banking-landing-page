@@ -4,6 +4,9 @@ import Logo from './header/Logo';
 import MobileMenu from './header/MobileMenu';
 import DesktopNavigation from './header/DesktopNavigation';
 import QuickActions from './header/QuickActions';
+import { Button } from '@/components/ui/button';
+import { Send, CreditCard, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,6 +66,40 @@ const Header = () => {
           {/* Mobile Logo - Right Side on small/medium screens */}
           <div className="lg:hidden flex items-center">
             <Logo />
+          </div>
+
+          {/* Action Buttons - Center */}
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <Link to="/send-money">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
+              >
+                <Send className="w-4 h-4" />
+                <span className="hidden sm:inline">Send Money</span>
+              </Button>
+            </Link>
+            <Link to="/credit-passport">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
+              >
+                <CreditCard className="w-4 h-4" />
+                <span className="hidden sm:inline">Credit Passport</span>
+              </Button>
+            </Link>
+            <Link to="/verify-identity">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
+              >
+                <Shield className="w-4 h-4" />
+                <span className="hidden sm:inline">Verify Identity</span>
+              </Button>
+            </Link>
           </div>
 
           {/* Desktop Navigation and Right Section */}
