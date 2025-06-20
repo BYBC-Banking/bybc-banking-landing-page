@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Send, CreditCard, Shield } from 'lucide-react';
 import Logo from './header/Logo';
 import MobileMenu from './header/MobileMenu';
 import DesktopNavigation from './header/DesktopNavigation';
-import QuickActions from './header/QuickActions';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,6 +42,12 @@ const Header = () => {
     }
   ];
 
+  const quickActionButtons = [
+    { icon: Send, label: 'Send Money', path: '/send-money' },
+    { icon: CreditCard, label: 'Credit Passport', path: '/credit-passport' },
+    { icon: Shield, label: 'Verify Identity', path: '/verify-identity' }
+  ];
+
   return (
     <header className="bg-[#0f0f23] border-b border-gray-800 sticky top-0 z-50">
       {/* Main Header */}
@@ -65,13 +72,26 @@ const Header = () => {
             <Logo />
           </div>
 
+          {/* Quick Action Buttons - Center */}
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            {quickActionButtons.map((action) => (
+              <Link
+                key={action.label}
+                to={action.path}
+                className="group flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-2 rounded-full bg-transparent hover:bg-gray-800 transition-all duration-200"
+              >
+                <action.icon className="w-4 h-4 text-gray-400 group-hover:text-[#ffd700] transition-colors" />
+                <span className="text-xs sm:text-sm text-gray-400 group-hover:text-white transition-colors hidden sm:block">
+                  {action.label}
+                </span>
+              </Link>
+            ))}
+          </div>
+
           {/* Desktop Navigation and Right Section */}
           <DesktopNavigation navigationItems={navigationItems} />
         </div>
       </div>
-
-      {/* Quick Actions Bar */}
-      <QuickActions />
     </header>
   );
 };
