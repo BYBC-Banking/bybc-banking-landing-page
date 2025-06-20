@@ -58,16 +58,6 @@ const Header = () => {
             />
           </div>
 
-          {/* Desktop Logo - Left Side on large screens */}
-          <div className="hidden lg:flex items-center">
-            <Logo />
-          </div>
-
-          {/* Mobile Logo - Right Side on small/medium screens */}
-          <div className="lg:hidden flex items-center">
-            <Logo />
-          </div>
-
           {/* Action Buttons - Center */}
           <div className="flex items-center space-x-2 sm:space-x-4">
             <Link to="/send-money">
@@ -100,6 +90,11 @@ const Header = () => {
                 <span className="hidden sm:inline">Verify Identity</span>
               </Button>
             </Link>
+          </div>
+
+          {/* Logo - Right Side */}
+          <div className="flex items-center">
+            <Logo />
           </div>
 
           {/* Desktop Navigation and Right Section */}
