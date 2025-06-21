@@ -1,13 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User, Building2, Heart, TrendingUp, GraduationCap, BookOpen } from 'lucide-react';
+import { User, Building2, TrendingUp, GraduationCap, BookOpen } from 'lucide-react';
 
 const QuickActions = () => {
   const quickActions = [
     { icon: User, label: 'Personal', path: '/personal', tooltip: 'Personal banking solutions', showOnMobile: false },
     { icon: Building2, label: 'Business', path: '/business', tooltip: 'Business banking services', showOnMobile: false },
-    { icon: Heart, label: 'Non-Profit', path: '/non-profit', tooltip: 'Non-profit banking solutions', showOnMobile: false },
     { icon: TrendingUp, label: 'Investments', path: '/investments', tooltip: 'Investment opportunities', showOnMobile: false },
     { icon: GraduationCap, label: 'Education', path: '/education', tooltip: 'Educational banking services', showOnMobile: false },
     { icon: BookOpen, label: 'Learn', path: '/learn', tooltip: 'Financial education resources', showOnMobile: false }
