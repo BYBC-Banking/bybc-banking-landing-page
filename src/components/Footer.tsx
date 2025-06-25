@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download } from "lucide-react";
 
@@ -112,6 +113,99 @@ const Footer = () => {
                   </div>
                 </div>
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Links Section */}
+        <div className="border-t border-gray-800 pt-16 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+            {/* Personal */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Personal</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Savings Account</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Current Account</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Fixed Deposits</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Personal Loans</a></li>
+              </ul>
+            </div>
+
+            {/* Business */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Business</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Business Account</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Business Loans</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Merchant Services</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Treasury Solutions</a></li>
+              </ul>
+            </div>
+
+            {/* Non-Profit */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Non-Profit</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">NGO Banking</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Donor Management</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Impact Reporting</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Fundraising Tools</a></li>
+              </ul>
+            </div>
+
+            {/* Investments */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Investments</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Unit Trusts</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Retirement Annuities</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Tax-Free Savings</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Share Trading</a></li>
+              </ul>
+            </div>
+
+            {/* Education */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Education</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Student Accounts</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Education Loans</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Financial Literacy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Scholarships</a></li>
+              </ul>
+            </div>
+
+            {/* Learn */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Learn</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Financial Education</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Investment Guides</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Banking Tutorials</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Market Insights</a></li>
+              </ul>
+            </div>
+
+            {/* Join BYBC */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Join BYBC</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Internships</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Graduate Program</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Culture & Values</a></li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Leadership</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">News & Media</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              </ul>
             </div>
           </div>
         </div>

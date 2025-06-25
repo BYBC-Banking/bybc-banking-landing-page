@@ -1,5 +1,6 @@
 
 import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
 import AccountTypes from "@/components/AccountTypes";
 import Features from "@/components/Features";
@@ -9,6 +10,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#0f0f23] text-white">
+      <Banner />
       <Header />
       <Hero />
       <AccountTypes />
