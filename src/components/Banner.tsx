@@ -18,10 +18,17 @@ const Banner = () => {
           variant="ghost" 
           size="sm" 
           className="bg-[#0f0f23] text-white hover:bg-gray-800 flex items-center space-x-2 text-sm"
+          asChild
         >
-          <Users className="w-4 h-4" />
-          <span className="hidden sm:inline">Join Our Team</span>
-          <span className="sm:hidden">Join</span>
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf6Qcrm0kReJtlJGyBqKNaPLuRxeGVEkwKaircbWhOT_S04BQ/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Users className="w-4 h-4" />
+            <span className="hidden sm:inline">Join Our Team</span>
+            <span className="sm:hidden">Join</span>
+          </a>
         </Button>
       </div>
     </div>

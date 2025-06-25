@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download } from "lucide-react";
 
@@ -200,7 +201,16 @@ const Footer = () => {
               <h4 className="text-white font-medium mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Jobs</a></li>
+                <li>
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf6Qcrm0kReJtlJGyBqKNaPLuRxeGVEkwKaircbWhOT_S04BQ/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    Jobs
+                  </a>
+                </li>
                 <li><a href="#" className="hover:text-white transition-colors">News & Media</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
