@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download } from "lucide-react";
 
@@ -190,7 +189,6 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-medium mb-4">Join BYBC</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Internships</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Graduate Program</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Culture & Values</a></li>
@@ -202,7 +200,7 @@ const Footer = () => {
               <h4 className="text-white font-medium mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Leadership</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Jobs</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">News & Media</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
