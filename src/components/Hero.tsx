@@ -76,6 +76,26 @@ const Hero = () => {
                 </div>
               </div>
             </a>
+
+            <a 
+              href="#"
+              className="inline-block bg-black hover:bg-gray-900 transition-all duration-300 hover:scale-105 rounded-xl overflow-hidden"
+            >
+              <div className="flex items-center gap-3 px-6 py-3">
+                <div className="flex items-center justify-center w-6 h-6">
+                  <img 
+                    src="/huawei.svg" 
+                    alt="Huawei AppGallery" 
+                    className="w-6 h-6 object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="text-xs text-gray-400 leading-none">EXPLORE IT ON</div>
+                  <div className="text-lg text-white font-medium leading-tight">AppGallery</div>
+                </div>
+              </div>
+            </a>
           </div>
 
           {/* Trust indicators */}
