@@ -86,7 +86,7 @@ const Hero = () => {
                   <img 
                     src="/huawei.svg" 
                     alt="Huawei AppGallery" 
-                    className="w-8 h-8 object-contain"
+                    className="w-10 h-10 object-contain"
                     loading="lazy"
                   />
                 </div>
