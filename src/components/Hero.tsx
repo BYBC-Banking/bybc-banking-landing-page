@@ -82,7 +82,7 @@ const Hero = () => {
               className="inline-block bg-black hover:bg-gray-900 transition-all duration-300 hover:scale-105 rounded-xl overflow-hidden"
             >
               <div className="flex items-center gap-3 px-6 py-3">
-                <div className="flex items-center justify-center w-6 h-6">
+                <div className="flex items-center justify-center w-8 h-8">
                   <img 
                     src="/huawei.svg" 
                     alt="Huawei AppGallery" 
