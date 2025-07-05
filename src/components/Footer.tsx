@@ -25,7 +25,7 @@ const Footer = () => {
                   <h3 className="text-white text-lg font-medium mb-2">Android Users</h3>
                   <p className="text-gray-400 text-sm">Download from Google Play</p>
                 </div>
-                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center hidden md:flex">
                   <QrCode className="w-8 h-8 text-black" />
                 </div>
               </div>
@@ -58,7 +58,7 @@ const Footer = () => {
                   <h3 className="text-white text-lg font-medium mb-2">iOS Users</h3>
                   <p className="text-gray-400 text-sm">Download from App Store</p>
                 </div>
-                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center hidden md:flex">
                   <QrCode className="w-8 h-8 text-black" />
                 </div>
               </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                   <h3 className="text-white text-lg font-medium mb-2">Huawei Users</h3>
                   <p className="text-gray-400 text-sm">Download from AppGallery</p>
                 </div>
-                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center hidden md:flex">
                   <QrCode className="w-8 h-8 text-black" />
                 </div>
               </div>
