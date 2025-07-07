@@ -13,6 +13,7 @@ import Education from "./pages/Education";
 import Learn from "./pages/Learn";
 import VerifyIdentity from "./pages/VerifyIdentity";
 import CreditPassport from "./pages/CreditPassport";
+import SendMoney from "./pages/SendMoney";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/learn" element={<Learn />} />
           <Route path="/verify-identity" element={<VerifyIdentity />} />
           <Route path="/credit-passport" element={<CreditPassport />} />
+          <Route path="/send-money" element={<SendMoney />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
