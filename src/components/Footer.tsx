@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Shield, QrCode, Facebook, Twitter, Instagram, Linkedin, Smartphone, Download } from "lucide-react";
 
@@ -26,7 +25,11 @@ const Footer = () => {
                   <p className="text-gray-400 text-sm">Download from Google Play</p>
                 </div>
                 <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center hidden md:flex">
-                  <QrCode className="w-8 h-8 text-black" />
+                  <img 
+                    src="/lovable-uploads/8f5a585e-c5b8-4147-bc26-8002056ba1a1.png" 
+                    alt="QR Code for Google Play Store" 
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
               
