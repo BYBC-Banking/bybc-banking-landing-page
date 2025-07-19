@@ -28,7 +28,7 @@ const Footer = () => {
                   <img 
                     src="/lovable-uploads/8f5a585e-c5b8-4147-bc26-8002056ba1a1.png" 
                     alt="QR Code for Google Play Store" 
-                    className="w-14 h-14 object-contain"
+                    className="w-15 h-15 object-contain"
                   />
                 </div>
               </div>
