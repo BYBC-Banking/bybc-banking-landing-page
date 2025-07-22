@@ -23,16 +23,16 @@ const QuickActions = () => {
     <div className="bg-gray-900 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Mobile Action Buttons - Only visible on smaller screens */}
-        <div className="lg:hidden flex items-center justify-center space-x-2 py-3">
+        <div className="lg:hidden flex items-center justify-center space-x-1 py-3">
           {mobileActionButtons.map((action) => (
             <Link key={action.label} to={action.path}>
               <Button 
                 variant="ghost" 
-                size="lg"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-2 px-4 py-3 h-12"
+                size="sm"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 px-2 py-2 h-10"
               >
-                <action.icon className="w-6 h-6" />
-                <span className="text-sm font-medium">{action.label}</span>
+                <action.icon className="w-4 h-4" />
+                <span className="text-xs font-medium hidden xs:inline">{action.label}</span>
               </Button>
             </Link>
           ))}
