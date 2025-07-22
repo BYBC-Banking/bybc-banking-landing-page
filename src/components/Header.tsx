@@ -48,7 +48,7 @@ const Header = () => {
     <header className="bg-[#0f0f23] border-b border-gray-800 sticky top-0 z-50">
       {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 sm:h-20 lg:h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Left Side - Mobile Menu + Desktop Logo */}
           <div className="flex items-center">
             {/* Mobile Menu Button */}
@@ -67,35 +67,35 @@ const Header = () => {
           </div>
 
           {/* Action Buttons - Center */}
-          <div className="flex items-center space-x-1 sm:space-x-3 lg:space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <Link to="/send-money">
               <Button 
                 variant="ghost" 
                 size="sm"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2 h-10 sm:h-11 px-2 sm:px-3"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
               >
-                <Send className="w-5 h-5 sm:w-4 sm:h-4" />
-                <span className="hidden sm:inline text-sm">Send Money</span>
+                <Send className="w-4 h-4" />
+                <span className="hidden sm:inline">Send Money</span>
               </Button>
             </Link>
             <Link to="/credit-passport">
               <Button 
                 variant="ghost" 
                 size="sm"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2 h-10 sm:h-11 px-2 sm:px-3"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
               >
-                <CreditCard className="w-5 h-5 sm:w-4 sm:h-4" />
-                <span className="hidden sm:inline text-sm">Credit Passport</span>
+                <CreditCard className="w-4 h-4" />
+                <span className="hidden sm:inline">Credit Passport</span>
               </Button>
             </Link>
             <Link to="/verify-identity">
               <Button 
                 variant="ghost" 
                 size="sm"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2 h-10 sm:h-11 px-2 sm:px-3"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
               >
-                <Shield className="w-5 h-5 sm:w-4 sm:h-4" />
-                <span className="hidden sm:inline text-sm">Verify Identity</span>
+                <Shield className="w-4 h-4" />
+                <span className="hidden sm:inline">Verify Identity</span>
               </Button>
             </Link>
           </div>
