@@ -66,8 +66,8 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Action Buttons - Center */}
-          <div className="flex items-center space-x-2 sm:space-x-4">
+          {/* Action Buttons - Center - Hidden on smaller screens */}
+          <div className="hidden lg:flex items-center space-x-2 sm:space-x-4">
             <Link to="/send-money">
               <Button 
                 variant="ghost" 
