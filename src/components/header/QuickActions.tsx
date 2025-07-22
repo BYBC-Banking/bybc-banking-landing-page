@@ -48,7 +48,7 @@ const QuickActions = () => {
     path: '/verify-identity'
   }];
   return <div className="bg-gray-900 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Mobile Action Buttons - Only visible on smaller screens */}
         <div className="lg:hidden flex items-center justify-center space-x-1 py-3">
           {mobileActionButtons.map(action => <Link key={action.label} to={action.path}>
