@@ -71,31 +71,31 @@ const Header = () => {
             <Link to="/send-money">
               <Button 
                 variant="ghost" 
-                size="sm"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
+                size="lg"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-2 px-4 py-3 sm:px-6 sm:py-4 h-12 sm:h-14"
               >
-                <Send className="w-4 h-4" />
-                <span className="hidden sm:inline">Send Money</span>
+                <Send className="w-6 h-6 sm:w-7 sm:h-7" />
+                <span className="hidden sm:inline text-base font-medium">Send Money</span>
               </Button>
             </Link>
             <Link to="/credit-passport">
               <Button 
                 variant="ghost" 
-                size="sm"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
+                size="lg"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-2 px-4 py-3 sm:px-6 sm:py-4 h-12 sm:h-14"
               >
-                <CreditCard className="w-4 h-4" />
-                <span className="hidden sm:inline">Credit Passport</span>
+                <CreditCard className="w-6 h-6 sm:w-7 sm:h-7" />
+                <span className="hidden sm:inline text-base font-medium">Credit Passport</span>
               </Button>
             </Link>
             <Link to="/verify-identity">
               <Button 
                 variant="ghost" 
-                size="sm"
-                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-1 sm:space-x-2"
+                size="lg"
+                className="text-white hover:text-[#ffd700] hover:bg-gray-800 flex items-center space-x-2 px-4 py-3 sm:px-6 sm:py-4 h-12 sm:h-14"
               >
-                <Shield className="w-4 h-4" />
-                <span className="hidden sm:inline">Verify Identity</span>
+                <Shield className="w-6 h-6 sm:w-7 sm:h-7" />
+                <span className="hidden sm:inline text-base font-medium">Verify Identity</span>
               </Button>
             </Link>
           </div>
