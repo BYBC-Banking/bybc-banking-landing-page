@@ -2,7 +2,6 @@
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
-import TrustpilotReviews from "@/components/TrustpilotReviews";
 import AccountTypes from "@/components/AccountTypes";
 import Features from "@/components/Features";
 import AppPreview from "@/components/AppPreview";
@@ -14,7 +13,6 @@ const Index = () => {
       <Banner />
       <Header />
       <Hero />
-      <TrustpilotReviews />
       <AccountTypes />
       <Features />
       <AppPreview />
